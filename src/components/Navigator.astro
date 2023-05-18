@@ -4,17 +4,21 @@ import Link from "./Link.astro";
 const {} = Astro.props;
 ---
 
-<nav class="flex justify-between items-center p-2">
+<nav class="flex justify-between items-center py-2">
   <h3 class="text-2xl font-bold pr-7 border-r-2 border-gray-400">
     All Posts
   </h3>
-  <div class="flex justify-start flex-grow-1">
+  <div class="flex justify-start flex-grow gap-2 px-2">
     <Link
       text="Tecnología"
       href="/"
     />
     <Link
       text="Anime"
+      href="/"
+    />
+    <Link
+      text="industria"
       href="/"
     />
   </div>
