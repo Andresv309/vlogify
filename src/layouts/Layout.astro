@@ -27,12 +27,14 @@ const { title } = Astro.props;
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 
-		--primary-color: #F0DB19;
-		--secondary-color: #5219F0;
+		--dark-background-color: #2A363B;
+		--dark-primary-color: #08C6AB;
+		--dark-secondary-color: #726EFF;
+		--dark-color-text: white; 
 	}
 	html {
 		font-family: system-ui, sans-serif;
-		background-color: #141414;
+		background-color: var(--dark-background-color);
 		min-width: 350px;
 	}
 	code {
