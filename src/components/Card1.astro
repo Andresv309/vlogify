@@ -1,4 +1,6 @@
 ---
+import Autor from './Autor.astro';
+
 interface Props{
   image: string;
   category: string;
@@ -9,13 +11,21 @@ const { image, category,title } = Astro.props
 ---
 
 <div class="flex flex-col max-w-5xl mx-auto min-w-full cursor-pointer" >
-  <img src={image} alt="" class="rounded-t-xl">
-  <div class="flex flex-col bg-white/10 p-8 rounded-b-xl font-bold mb-12 gap-4">
+  <div class="relative  group-hover:opacity-100">
+    <img src={image} alt="" class="rounded-t-3xl">
+    <div class="flex flex-row absolute bottom-0 right-0 opacity-0 translate-all">
+      <Autor/>
+      <Autor/>
+    </div>
+  </div>
+  <div class="flex flex-col bg-white/10 p-4 rounded-b-xl font-bold mb-12 gap-2">
     <a href="">
-      <h7 class= "uppercase text-xs font-semibold py-2 px-2 rounded-xl bg-white/60 hover:bg-white/10">{category}</h7>
+      <h7 class= "uppercase text-xs font-semibold py-1 px-2 rounded-md bg-white/60 hover:bg-white/10">{category}</h7>
     </a>
     <h4 class="text-xl font-bold py-2 px-1">
       {title}
     </h4>
+
+  
   </div>
 </div>
