@@ -1,9 +1,11 @@
 ---
+import Card1 from '../components/Card1.astro';
 import Navigator from '../components/Navigator.astro';
 import Layout from '../layouts/Layout.astro';
 ---
 
 <Layout title="Home Page">
+
 	<section class="bg-red-600 flex flex-col">
 		<h1>últimos Posts</h1>
 		<img src="/favicon.svg" alt="" class="w-[250px]">
@@ -11,5 +13,34 @@ import Layout from '../layouts/Layout.astro';
 
 	<section>
 		<Navigator />
+
+		<section class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1800px] m-auto gap-6 py-8">
+			<Card1 
+				image="/ejemploCard.jpg"
+				category="Montañas"
+				title="Las montañas son Hermosas"
+			/>
+			<Card1 
+				image="/ejemploCard.jpg"
+				category="Montañas"
+				title="Las montañas son Hermosas"
+			/>
+			<Card1 
+				image="/ejemploCard.jpg"
+				category="Montañas"
+				title="Las montañas son Hermosas"
+			/>
+			<Card1 
+				image="/ejemploCard.jpg"
+				category="Montañas"
+				title="Las montañas son Hermosas"
+			/>
+			<Card1 
+				image="/ejemploCard.jpg"
+				category="Montañas"
+				title="Las montañas son Hermosas"
+			/>
+
+		</section>
 	</section>
 </Layout>
