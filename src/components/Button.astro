@@ -25,6 +25,7 @@ const {
 ---
 
 <button
+  class="px-2 py-1 rounded-md text-white bg-"
   class:list={[
     style,
     classes,
@@ -38,14 +39,17 @@ const {
 <!-- <button class="primary personalizada1 personalizada2 filled"></button> -->
 
 <style>
-
-  .primary.filled  {
-    background-color: var(--primary-color);
-    
+  .filled.primary {
+    background-color: var(--dark-primary-color);
   }
 
-  .secondary{
-    background-color: var(--secondary-color);
+  .filled.secondary {
+    background-color: var(--dark-secondary-color);
   }
+
+  .bordered {
+    border: 1px solid white;
+  }
+
 
 </style>
