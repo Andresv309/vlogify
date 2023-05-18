@@ -1,0 +1,51 @@
+---
+interface Props {
+  text: string;
+  href: string;
+  style: "primary" | "secondary";
+  icon?: {
+    name: string;
+    side: "left" | "right";
+  };
+  isFilled?: boolean;
+  borderVisible?: boolean;
+  classes?: string;
+}
+
+const {
+  text,
+  href,
+  style,
+  icon,
+  isFilled = true,
+  borderVisible = false,
+  classes
+} = Astro.props as Props;
+
+---
+
+<button
+  class:list={[
+    style,
+    classes,
+    {filled: isFilled, bordered: borderVisible}
+  ]}
+>
+  <a href={href} aria-label={text}>{text}</a>
+</button>
+
+
+<!-- <button class="primary personalizada1 personalizada2 filled"></button> -->
+
+<style>
+
+  .primary.filled  {
+    background-color: var(--primary-color);
+    
+  }
+
+  .secondary{
+    background-color: var(--secondary-color);
+  }
+
+</style>
