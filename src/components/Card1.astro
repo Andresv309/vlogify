@@ -11,9 +11,9 @@ const { image, category,title } = Astro.props
 ---
 
 <div class="flex flex-col max-w-5xl mx-auto min-w-full cursor-pointer" >
-  <div class="relative">
+  <div class="relative  group-hover:opacity-100">
     <img src={image} alt="" class="rounded-t-3xl">
-    <div class="flex flex-row absolute bottom-0 right-0">
+    <div class="flex flex-row absolute bottom-0 right-0 opacity-0 translate-all">
       <Autor/>
       <Autor/>
     </div>
