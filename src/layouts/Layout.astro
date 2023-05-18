@@ -22,8 +22,13 @@ const { title } = Astro.props;
 		<Header />
 		<!-- <slot /> -->
 
-		<section class="grid grid-cols-5 min-w-[800px] max-w-[1800px] m-auto gap-5 py-8 px-4">
-				<Card1 
+		<section class="grid grid-cols-3 min-w-[800px] max-w-[1800px] m-auto gap-6 py-8 px-8">
+			<Card1 
+				image="/ejemploCard.jpg"
+				category="Montañas"
+				title="Las montañas son Hermosas"
+			/>
+			<Card1 
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"
@@ -38,9 +43,13 @@ const { title } = Astro.props;
 				category="Montañas"
 				title="Las montañas son Hermosas"
 			/>
+			<Card1 
+				image="/ejemploCard.jpg"
+				category="Montañas"
+				title="Las montañas son Hermosas"
+			/>
+
 		</section>
-
-
 
 	</body>
 </html>
@@ -58,6 +67,7 @@ const { title } = Astro.props;
 		background-color: var(--dark-background-color);
 		min-width: 350px;
 		color: var(--dark-color-text);
+ 
 	}
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,

@@ -8,9 +8,9 @@ interface Props{
 const { image, category,title } = Astro.props
 ---
 
-<div class="flex flex-col max-w-5xl mx-auto min-w-full" >
+<div class="flex flex-col max-w-5xl mx-auto min-w-full cursor-pointer" >
   <img src={image} alt="" class="rounded-t-xl">
-  <div class="flex flex-col bg-white/10 p-8 rounded-b-xl font-bold mb-12 gap-5">
+  <div class="flex flex-col bg-white/10 p-8 rounded-b-xl font-bold mb-12 gap-4">
     <a href="">
       <h7 class= "uppercase text-xs font-semibold py-2 px-2 rounded-xl bg-white/60 hover:bg-white/10">{category}</h7>
     </a>
