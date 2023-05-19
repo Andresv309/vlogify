@@ -1,0 +1,51 @@
+---
+import Card3 from "../../components/Card3.astro";
+import Layout from "../../layouts/Layout.astro";
+import { slugify } from "../../utils/formatters"
+
+export async function getStaticPaths () {
+  const allPosts = await Astro.glob("../post/*.md")
+  const allAuthors = [
+    ...new Set(allPosts.map(post => {
+      return post.frontmatter.author.name
+    }
+    ).flat())
+  ]
+  
+
+  return allAuthors.map(authorName => {
+    const authorPosts = allPosts.filter(post => post.frontmatter.author.name === authorName)
+    return {
+      params: { author: slugify(authorName) },
+      props: {
+        authorName,
+        posts: authorPosts
+      }
+    }
+  })
+}
+
+const { author } = Astro.params
+const { authorName, posts } = Astro.props
+---
+
+<Layout title={authorName}>
+  <section aria-label={`Posts by ${authorName}`}>
+    <h1>Posts by <span>{authorName}</span></h1>
+    <div class="flex flex-col gap-4">
+      {
+        posts.map(post => {
+          const {title, image, category} = post.frontmatter
+          return (
+            <Card3 
+              {title}
+              image={image.src}
+              {category}
+            />
+            <a href={post.url}>Ver Post</a>
+          )
+        })
+      }
+    </div>
+  </section>
+</Layout>
