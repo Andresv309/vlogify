@@ -11,14 +11,8 @@ const { image, category,title } = Astro.props
 ---
 
 <div id="card" class="flex flex-col max-w-sm mx-auto min-w-full cursor-pointer rounded-lg" >
-  <div class="relative  group-hover:opacity-100">
-    <img src={image} alt="" class="rounded-t-3xl">
-    <div class="flex flex-row absolute bottom-0 right-0 opacity-100 translate-all">
-      <Autor/>
-      <Autor/>
-    </div>
-  </div>
-  <div class="flex flex-col p-3  font-bold pb-2 gap-2 border-b-[#00ec9568]  border-b-2">
+
+  <div class="flex flex-col p-3  font-bold pb-2 gap-2 border-b-[#00ec9568]">
     <a href="">
       <h6 class= "uppercase text-xs text-[var(--color-category-text)] font-semibold py-1 px-2 rounded-md bg-[var(--color-category-bg)]   hover:bg-white/10 inline-block">{category}</h6>
     </a>
@@ -26,6 +20,14 @@ const { image, category,title } = Astro.props
       {title}
     </h4>  
   </div>
+
+  <div class="relative  group-hover:opacity-100">
+    <img src={image} alt="" class="rounded-b-3xl">
+    <div class="flex flex-row absolute bottom-0 right-0 opacity-100 translate-all">
+      <Autor/>
+    </div>
+  </div>
+
 </div>
 
 <!-- <style>

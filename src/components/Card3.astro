@@ -1,0 +1,42 @@
+---
+import Autor from './Autor.astro';
+
+interface Props{
+  image: string;
+  category: string;
+  title: string; 
+}
+
+const { image, category,title } = Astro.props
+---
+
+<div id="card" class="grid grid-cols-2 relative rounded-3xl bg-white/10 h-[375px] col-span-3 gap-[2.5rem]" >
+
+
+  <div class="relative group-hover:opacity-100 flex-grow">
+    <img src={image} alt="" class="rounded-3xl object-cover h-full" >
+    <div class="flex flex-row absolute bottom-0 right-0 opacity-100 translate-all">
+      <Autor/>
+    </div>
+  </div>
+
+  <div class="flex flex-col font-bold py-5 pr-5 gap-2 border-b-[#00ec9568]">
+    <a href="">
+      <h6 class= "uppercase text-xs text-[var(--color-category-text)] font-semibold py-1 px-2 rounded-md bg-[var(--color-category-bg)]   hover:bg-white/10 inline-block">{category}</h6>
+    </a>
+    <h3 class="text-[1.75rem] font-bold py-1 px-1">
+      {title}
+    </h3>
+    <p class="font-light">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio doloremque consectetur aperiam.
+    </p>
+  </div>
+
+</div>
+
+<!-- <style>
+  #card{
+    box-shadow: var(--shadow-elevation-high);
+  }
+ 
+</style> -->
