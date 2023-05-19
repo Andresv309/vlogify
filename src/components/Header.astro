@@ -3,7 +3,7 @@ import Button from "./Button.astro";
 
 ---
 
-<header class="flex justify-between items-center py-4 px-2 bg-[var(--dark-background-color)] shadow-xl">
+<header class="flex justify-between items-center py-4 px-2 bg-[var(--background-color)] shadow-xl">
   <div class="flex items-center gap-2">
     <a href="/" class="flex items-center">
       <img src="/favicon.svg" alt="Logo Blog">
@@ -21,6 +21,6 @@ import Button from "./Button.astro";
 <script>
   const btnChangeThemeColor = document.querySelector("#btn-changeThemeColor")
   btnChangeThemeColor.addEventListener("click", () => {
-    document.body.classList.toggle("dark-theme")   
+    document.body.classList.toggle("light-theme")   
   })
 </script>
