@@ -1,4 +1,6 @@
 ---
+import { Icon } from 'astro-icon'
+
 interface Props {
   text: string;
   href: string;
@@ -25,16 +27,27 @@ const {
 ---
 
 <button
-  class="px-2 py-1 rounded-md text-white bg-"
+  class="flex items-center px-2 py-1 rounded-md text-[var(--text-color)] bg-[var(--primary-color)]"
   class:list={[
     style,
     classes,
     {filled: isFilled, bordered: borderVisible}
   ]}
 >
-  <a href={href} aria-label={text}>{text}</a>
-</button>
 
+  {
+    // icon && icon.side === "left" && <img src={icon.src} alt=""></img>
+    icon && icon.side === "left" && <Icon name={icon.name} width="20"/>
+  }
+
+<a href={href} aria-label={text}>{text}</a>
+
+  {
+  // icon && icon.side === "right" && <img src={icon.src} alt=""></img>
+    icon && icon.side === "right" && <Icon name={icon.name} width="20"/>
+  }
+
+</button>
 
 <!-- <button class="primary personalizada1 personalizada2 filled"></button> -->
 
@@ -50,6 +63,4 @@ const {
   .bordered {
     border: 1px solid white;
   }
-
-
 </style>

@@ -1,8 +1,61 @@
 ---
-
+import Link from './Link.astro';
+import Title from './Title.astro'
 ---
 
-<figure>
-  <img src="/favicon.svg" alt=" ">
-  
+<figure class="relative w-full h-full mt-3">
+  <img src="/photo-post.avif" alt=" ">
+  <div id="ca" class="flex flex-grow absolute bottom-0 left-0 pl-4 py-4 backdrop-blur-sm w-full">
+    <div class="flex items-center border-r-2 border-gray-400">
+      <img src="/favicon.svg" alt="" width="45">
+    </div>
+    <div class="flex flex-col pl-4 gap-1.5">
+      <div>
+        <Link text="Marketing" href="/"/>
+        <Title title="Everything You Need to Know About Content Management Systems!"/>
+      </div>
+      <div>
+        <a href="/" class="flex gap-1.5">
+          <img src="/author-photo.webp" alt="" width="25" class="rounded-full">
+          <span>Valia Havryliuk • 12/05/2023</span>
+        </a>
+      </div>
+    </div>
+  </div>
 </figure>
+
+<!-- <figure class="relative w-full h-full mt-3">
+  <img src="/photo-post.avif" alt=" ">
+  <div class="flex flex-grow absolute bottom-0 left-0 pl-4 pb-4">
+    <div class="flex items-center border-r-2 border-gray-400">
+      <img src="/favicon.svg" alt="" width="45">
+    </div>
+    <div class="flex flex-col pl-4 gap-0">
+      <Link text="Marketing" href="/"/>
+      <Title title="Everything You Need to Know About Content Management Systems!"/>
+      <div class="flex items-center">
+        <img src="/author-photo.webp" alt="" width="30" class="rounded-full">
+        <span>Valia Havryliuk • 12/05/2023</span>
+      </div>
+    </div>
+  </div>
+</figure> -->
+
+
+<!-- <style>
+  #ca {
+    background-image: linear-gradient(
+      0deg,
+      hsl(0deg 0% 0%) 0%,
+      hsl(344deg 0% 12%) 25%,
+      hsl(344deg 0% 21%) 35%,
+      hsl(344deg 0% 31%) 44%,
+      hsl(344deg 0% 41%) 51%,
+      hsl(344deg 0% 52%) 58%,
+      hsl(344deg 0% 64%) 64%,
+      hsl(344deg 0% 75%) 72%,
+      hsl(344deg 0% 88%) 80%,
+      hsl(0deg 0% 100%) 100%
+    );
+  }
+</style> -->

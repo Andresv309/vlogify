@@ -1,5 +1,6 @@
 ---
 import BannerPost from "../components/BannerPost.astro";
+import Card1 from "../components/Card1.astro";
 import Paragraph from "../components/Paragraph.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
@@ -12,7 +13,8 @@ import Layout from "../layouts/Layout.astro";
     <Title title= "Mi publicación" />
     <BannerPost />
 
-    <section>
+
+    <!-- <section>
       <Paragraph>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Error dolores cum, atque placeat, iste quia sed ab eveniet odio ipsum dignissimos non recusandae molestiae voluptates tempora? Inventore dolorum culpa sequi?
         Nisi, eos praesentium. Dolores eos reiciendis saepe ducimus natus tenetur labore maiores molestias nesciunt dolorum ad commodi corrupti delectus modi, dolor est consectetur laboriosam, tempore fuga voluptates obcaecati ab itaque.
@@ -28,7 +30,7 @@ import Layout from "../layouts/Layout.astro";
         Nam earum laborum, fugiat eos et voluptatem labore. Deleniti, veniam beatae neque itaque quam pariatur consequuntur veritatis asperiores accusamus reprehenderit nihil odio quos rerum, blanditiis exercitationem assumenda, ad dolorem magni!
         Distinctio consequuntur, quod obcaecati ipsum velit, minus fugiat sequi atque suscipit delectus aliquam quae cumque recusandae esse impedit maxime accusantium necessitatibus aperiam autem nam dolores officiis ad culpa laudantium! Pariatur.
       </Paragraph>
-    </section>
+    </section> -->
 
   </article>
 
@@ -36,6 +38,12 @@ import Layout from "../layouts/Layout.astro";
     <h2 class="text-xl">
       <strong>También te podría interesar</strong>
     </h2>
+
+    <Card1 
+      image="/ejemploCard.jpg"
+      category="Montañas"
+      title="Las montañas son Hermosas"
+    />
 
   </section>
 </Layout>
