@@ -1,0 +1,24 @@
+---
+import Button from "../components/Button.astro";
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
+
+---
+
+<Layout title="Página No Encontrada">
+  <div class="grid place-items-center text-center gap-y-4 h-full">
+    <div>
+      <Title title="Bueno, esto es extraño."></Title>
+      <p>Parece que hemos puesto algo donde no era...</p>
+    </div>
+    <Button
+      text="Ir al Home"
+      href="/"
+      style="secondary"
+      icon={{
+        name: "tabler:home",
+        side: "right"
+      }}
+    />
+  </div>
+</Layout>
