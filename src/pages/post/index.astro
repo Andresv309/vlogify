@@ -1,0 +1,13 @@
+---
+import Layout from "../../layouts/Layout.astro";
+
+const allPosts = await Astro.glob("./*.md")
+console.log(allPosts)
+
+---
+
+<Layout title="My Blog">
+  {
+    JSON.stringify(allPosts[0].frontmatter, null, 2)
+  }
+</Layout>

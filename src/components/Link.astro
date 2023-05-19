@@ -8,6 +8,10 @@ interface Props {
 const { text, href } = Astro.props
 ---
 
-<a href="" class="font-bold hover:underline hover:underline-offset-4 hover:text-[var(--primary-color)] text-sm">
+<a 
+  class="font-bold hover:underline hover:underline-offset-4 hover:text-[var(--primary-color)] text-sm"
+  {href}
+  >
   {text}
 </a>
+

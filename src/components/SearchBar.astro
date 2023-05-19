@@ -1,7 +1,14 @@
 ---
-
+import { Icon } from 'astro-icon'
 ---
 
-<input type="text" class="bg-white">
-  hola
-</input>
+<fieldset class="relative text-[var(--secondary-color)]">
+  <input
+    type="search"
+    placeholder="Search what you want"
+    class="h-full w-full outline-none text-sm text-gray-700 pl-8 rounded-md"
+  />
+  <span class="absolute left-2 top-[calc(50%-9px)] w-[20px] flex items-center">
+    <Icon name="ic:outline-search" width="20"/>
+  </span>
+</fieldset>

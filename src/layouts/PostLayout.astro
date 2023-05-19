@@ -1,0 +1,41 @@
+---
+import BannerPost from "../components/BannerPost.astro";
+import Title from "../components/Title.astro";
+import Layout from "../layouts/Layout.astro";
+
+const { frontmatter } = Astro.props
+const { title, date, author, image, description, draft, category } = frontmatter
+// console.log(frontmatter)
+---
+
+<Layout {title} {description}>
+  <article>
+    <header>
+      <Title title= "Mi publicación" />
+      <BannerPost
+        {title}
+        {category}
+        {author}
+        {date}
+        {image}
+      />
+    </header>
+    
+    <div>
+      <slot />
+    </div>
+  </article>
+
+  <section class="my-8">
+    <h2 class="text-xl">
+      <strong>También te podría interesar</strong>
+    </h2>
+
+    <!-- <Card1 
+      image="/ejemploCard.jpg"
+      category="Montañas"
+      title="Las montañas son Hermosas"
+    /> -->
+
+  </section>
+</Layout>

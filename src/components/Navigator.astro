@@ -1,6 +1,7 @@
 ---
 import Button from "./Button.astro";
 import Link from "./Link.astro";
+import SearchBar from "./SearchBar.astro";
 const {} = Astro.props;
 ---
 
@@ -29,10 +30,13 @@ const {} = Astro.props;
       style="secondary"
       icon={{name:"ic:sharp-filter-alt", side:"left"}}
     />
-    <Button
+
+    <SearchBar />
+
+    <!-- <Button
       text="Buscar"
       href="/"
       style="secondary"
-    />
+    /> -->
   </div>
 </nav>
