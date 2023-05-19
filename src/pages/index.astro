@@ -1,5 +1,7 @@
 ---
 import Card1 from '../components/Card1.astro';
+import Card2 from '../components/Card2.astro';
+import Card3 from '../components/Card3.astro';
 import Navigator from '../components/Navigator.astro';
 import Title from '../components/Title.astro';
 import Layout from '../layouts/Layout.astro';
@@ -15,8 +17,8 @@ import Layout from '../layouts/Layout.astro';
 	<section>
 		<Navigator />
 
-		<section class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1800px] m-auto gap-6 py-8">
-			<Card1 
+		<!-- <section class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1800px] m-auto gap-x-9 gap-y-14 py-9">
+			<Card2 
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"
@@ -31,17 +33,28 @@ import Layout from '../layouts/Layout.astro';
 				category="Montañas"
 				title="Las montañas son Hermosas"
 			/>
-			<Card1 
+			<Card3 
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"
 			/>
-			<Card1 
+		</section> -->
+
+		<!-- <section class="grid grid-cols-4 max-w-[1800px] m-auto gap-x-9 gap-y-14 py-9"> -->
+		<section class="flex flex-col justify-start w-3/4 max-w-[1800px] gap-y-8 pt-8">
+
+			<Card3
+				image="/ejemploCard.jpg"
+				category="Montañas"
+				title="Las montañas son Hermosas con sabor a tamarindo "
+			/>
+			<Card3
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"
 			/>
 
-		</section>
+
+
 	</section>
 </Layout>
