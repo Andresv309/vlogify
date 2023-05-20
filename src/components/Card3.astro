@@ -16,14 +16,14 @@ const { image, category,title,description } = Astro.props
 
   <div id="contenedor_imagen" class="relative flex-grow">
     <img src={image} alt="" class="rounded-3xl object-cover h-full" >
-    <div class="flex flex-row absolute bottom-0 right-0 opacity-100 pb-1 pr-1">
+    <div class="flex flex-row absolute bottom-0 right-0 pb-0 pr-1">
       <Autor  parametro1="Written by" parametro2="Andres Viancha"/>
     </div>
   </div>
 
-  <div class="flex flex-col font-bold py-5 pr-5 gap-2 overflow-y-scroll">
+  <div class="flex flex-col font-bold py-5 pr-5 gap-2">
     <a href="">
-      <h6 class= "uppercase text-xs text-[var(--color-category-text)] font-semibold py-1 px-2 rounded-md bg-[var(--color-category-bg)]   hover:bg-white/10 hover:text-white inline-block">{category}</h6>
+      <h6 class= "w-fit uppercase text-xs text-[var(--color-category-text)] font-semibold py-1 px-2 rounded-md bg-[var(--color-category-bg)]   hover:bg-white/10 hover:text-white inline-block">{category}</h6>
     </a>
     <h3 class="text-[1.75rem] font-bold py-1 px-1">
       {title}
@@ -39,26 +39,37 @@ const { image, category,title,description } = Astro.props
 </div>
 
 <style>
-
-#contenedor_imagen > div{
+#card #contenedor_imagen > div{
   visibility: hidden;
-  opacity: 0;
+  opacity: 0%;
   transform: translatey(11%);
   transition: 0.7s;
 }
-
-#contenedor_imagen:hover > div{
+/* #contenedor_imagen:hover > div{
   visibility: visible;
   opacity: 100%;
   transform: translatey(-10%);
 }
-#contenedor_imagen > img{
-  /* transition: filter 0.8s ease-in-out; */
-  position: relative;
-  transition: filter 0.3s ease-in-out;
-}
 #contenedor_imagen:hover > img{
   filter: brightness(60%);
-  /* filter: blur(5px); */
-} 
+}  */
+
+
+#card:hover #contenedor_imagen > div{
+  visibility: visible;
+  opacity: 100%;
+  transform: translatey(-10%);
+}
+
+#card #contenedor_imagen > img{
+  /* transition: filter 700ms ease-in-out; */
+  /* transition: all 700ms ease-in-out; */
+  transition: 0.3s;
+}
+#card:hover #contenedor_imagen > img{
+  filter: brightness(60%);
+  /* opacity: 0.6; */
+}
+
+
 </style>
