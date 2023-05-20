@@ -1,17 +1,67 @@
 ---
 
+import { Icon } from 'astro-icon'
+
+// interface Props {
+//   text: string;
+//   href: string;
+//   icon?: {
+//     cod: string,
+//     side?: "right" | "left"
+//   }
+// }
 interface Props {
   text: string;
   href: string;
+  icon?: string;
 }
 
-const { text, href } = Astro.props
+const {
+  text, 
+  href, 
+  icon
+} = Astro.props
+
 ---
 
-<a 
+<!-- <a 
   class="font-bold hover:underline hover:underline-offset-4 hover:text-[var(--primary-color)] text-sm"
   {href}
   >
   {text}
+</a> -->
+
+<!-- <a 
+  {href}
+  class="flex items-center gap-1 py-1 px-2 hover:underline rounded-md hover:bg-[var(--secondary-color)] hover:text-[var(--background-color)]">
+  <span>
+    {
+      icon && icon.side === "left" && <Icon name={icon.cod} width="20"/>
+    }
+  </span>
+
+  {text}
+
+  <span>
+    {
+      icon && icon.side === "right" && <Icon name={icon.cod} width="20"/>
+    }
+  </span>
+</a> -->
+
+<a 
+  {href}
+  class="flex items-center gap-1 py-1 px-2 hover:underline rounded-md hover:bg-[var(--secondary-color)] hover:text-[var(--background-color)]">
+  {
+    icon &&
+    <span>
+      <Icon
+        name={icon}
+        width="20"
+      />
+    </span>
+  }
+  {text}
 </a>
+
 

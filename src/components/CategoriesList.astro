@@ -1,0 +1,47 @@
+---
+// import { Icon } from 'astro-icon'
+import Link from './Link.astro';
+
+---
+
+<nav>
+  <ul class="flex flex-col gap-y-2">
+    <!-- <li class="py-1 px-2 hover:underline rounded-md hover:bg-[var(--secondary-color)] hover:text-[var(--background-color)] transition-color ease-in-out duration-100"> -->
+    <li>
+      <Link
+        text= "Home"
+        href= "/"
+        icon= "ic:outline-search"
+      />
+    </li>
+    <li>
+      <Link
+        text= "Search"
+        href= "/"
+        icon= "ic:outline-search"
+      />
+    </li>
+    <li>
+      <Link
+        text= "Advanced"
+        href= "/"
+        icon= "ic:outline-search"
+      />
+    </li>
+  </ul>
+
+
+
+  <!-- <Link
+    text="Tecnología"
+    href="/"
+  />
+  <Link
+    text="Anime"
+    href="/"
+  />
+  <Link
+    text="industria"
+    href="/"
+  /> -->
+</nav>
