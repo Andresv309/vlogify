@@ -34,12 +34,13 @@ const { categoryName, posts } = Astro.props
     <div class="flex flex-col gap-4">
       {
         posts.map(post => {
-          const {title, image, category} = post.frontmatter
+          const {title, image, category, description} = post.frontmatter
           return (
             <Card3 
               {title}
               image={image.src}
               {category}
+              {description}
             />
             <a href={post.url}>Ver Post</a>
           )

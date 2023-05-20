@@ -27,7 +27,7 @@ const {
 	<body>
 		<Header />
 		
-		<main>
+		<main class="md:p-8">
 			<slot />
 		</main>
 
@@ -77,7 +77,8 @@ const {
 	main {
 		min-width: 350px;
 		max-width: 1200px;
-		padding: 2rem;
+		/* padding: 2rem; */
+		padding-top: 2rem;
 		margin: auto;
 		min-height: 100%;
 	}
@@ -85,9 +86,9 @@ const {
 	.light-theme {
 		--background-color: #ebf8fd;
 		--background-color-card: #D7DBDD ;  
-		--primary-color: #0e0b74;
-		--secondary-color: #212121;
-		--color-text: rgb(0, 0, 0); 
+		--primary-color: #7874EF;
+		--secondary-color: #EF5555;
+		--color-text: black; 
 		--shadow-color: 289deg 4% 20%; 
 
 	}
