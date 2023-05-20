@@ -2,12 +2,18 @@
 // import { Icon } from 'astro-icon'
 import Link from './Link.astro';
 
+const { categories } = Astro.props
+
 ---
 
-<nav>
+<nav class="flex flex-col gap-3">
+  <h3>Categories</h3>
   <ul class="flex flex-col gap-y-2">
     <!-- <li class="py-1 px-2 hover:underline rounded-md hover:bg-[var(--secondary-color)] hover:text-[var(--background-color)] transition-color ease-in-out duration-100"> -->
-    <li>
+
+
+
+    <!-- <li>
       <Link
         text= "Home"
         href= "/"
@@ -27,8 +33,24 @@ import Link from './Link.astro';
         href= "/"
         icon= "ic:outline-search"
       />
-    </li>
+    </li> -->
+
+    {
+      categories.map(category => (
+      <li>
+        <Link
+          text= {category.name}
+          href= {category.href}
+          icon= {category.icon}
+        />
+      </li>
+      ))
+    }
+
   </ul>
+
+
+
 
 
 
