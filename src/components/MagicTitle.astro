@@ -7,15 +7,82 @@ interface Props{
 const {value,keyWord} = Astro.props;
 
 ---
-<h1 class="font-black ">
-  <span class="text-[70px]">
-    {keyWord}
-  </span>
+<div class="flex font-black">
+  <h1 class="text-[70px] ">
+      {keyWord}
 
-  <span class="text-[100px]">  
-    {value} 
-  </span>
-</h1>
+    <span id="span_Efect" style=`--content: "${value}"; --start-color: #007CF0; --end-color: #00DFD8  ` class="text-[100px] block uppercase">  
+      {value}  
+    </span>
+  </h1>
+</div>
+
 
 <style>
+
+/* #span_Efect{
+  color: white;
+  display: block;
+  letter-spacing: -.04em;
+  line-height: 1.1;
+  position: relative;
+
+
+}
+
+@keyframes anim{
+  0%{background: linear-gradient(90deg, var(--start-color),var(--end-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
+  50%{background: linear-gradient(90deg, #7928CA, #FF0080); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  /* 50%{background: linear-gradient(90deg, #7928CA, #FF0080); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+  75%{background: linear-gradient(90deg, var(--start-color),var(--end-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;} */
+  /* 100%{background: linear-gradient(90deg, var(--start-color),var(--end-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
+} */
+
+/* #span_Efect::before{
+  background: linear-gradient(90deg, var(--start-color),var(--end-color));
+  position: absolute;
+  content: var(--content);
+  inset: 0; 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  animation: anim 5s infinite;
+  transition-timing-function: ease-in-out;
+}  */
+
+
+
+
+h1{
+  letter-spacing: -.06em;
+  line-height: 1.2;
+}
+span {
+  animation: fluido 7s ease-in-out infinite alternate;
+  animation-timing-function: linear;
+  background: linear-gradient(90deg, #00DFD8,#007CF0,#7928CA, #FF0080,#FF4D4D,#F9CB28);
+  background-size: 300%;
+  -webkit-background-clip: text;
+          background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -.06em;
+  line-height: 1.2;
+}
+
+@keyframes fluido {
+    /* 0% { background-position: 0 50% }
+    50% { background-position: 100% 50% }
+    100% { background-position: 0 50% } */
+
+  0%{background-position: left;}
+  100%{background-position: right;}
+}
+/* 
+@keyframes fluido {
+    0% { background-position: 0 50% }
+    100% { background-position: 100% 50% }
+} */
+
+
+
 </style>
