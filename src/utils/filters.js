@@ -29,7 +29,8 @@ export async function getPagesFor(allPosts, matchCondition, filterPostsOptions) 
       params: { [pageRoute]: slugify(page) },
       props: {
         [pageRoute]: page,
-        posts: filteredPosts
+        posts: filteredPosts,
+        [`${pageRoute}Name`]: page
       }
     }
   })
