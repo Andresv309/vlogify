@@ -2,16 +2,17 @@
 interface Props{
   value: string;
   keyWord: string;
+  size:string;
 }
 
-const {value,keyWord} = Astro.props;
+const {value,keyWord,size} = Astro.props;
 
 ---
 <div class="flex font-black">
-  <h1 class="text-[70px] ">
+  <h1 class="text-[70px] leading-[4.5rem]">
       {keyWord}
 
-    <span id="span_Efect" style=`--content: "${value}"; --start-color: #007CF0; --end-color: #00DFD8  ` class="text-[100px] block uppercase">  
+    <span id="span_Efect" style=`--content: "${value}"; --start-color: #007CF0; --end-color: #00DFD8  ` class=`text-[${size}px] block uppercase pl-24 pb-12`>  
       {value}  
     </span>
   </h1>
@@ -54,8 +55,8 @@ const {value,keyWord} = Astro.props;
 
 
 h1{
-  letter-spacing: -.06em;
-  line-height: 1.2;
+  letter-spacing: -.05em;
+  line-height: 1.1;
 }
 span {
   animation: fluido 7s ease-in-out infinite alternate;

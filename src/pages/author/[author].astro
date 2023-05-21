@@ -1,5 +1,6 @@
 ---
 import Card from "../../components/Card.astro";
+import MagicTitle from "../../components/MagicTitle.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getPagesFor } from "../../utils/filters";
 import { formatDate, slugify } from "../../utils/formatters"
@@ -43,7 +44,7 @@ const { authorName, posts } = Astro.props
 
 <Layout title={authorName}>
   <section aria-label={`Posts by ${authorName}`}>
-    <h1>Posts by <span>{authorName}</span></h1>
+    <MagicTitle value={authorName} keyWord="Escrito por" size="80"/>
     <div class="flex flex-col gap-4">
       {
         posts.map(post => {
@@ -59,7 +60,6 @@ const { authorName, posts } = Astro.props
 								imgAlt={image.alt}
                 postSrc={post.url}
 							/>
-            <a href={post.url}>Ver Post</a>
           )
         })
       }
