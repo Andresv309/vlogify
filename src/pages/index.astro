@@ -33,7 +33,7 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(5)
 	</section>
 
 	<Navigator />
-	<section class="grid grid-cols-[75%_25%] pt-8 gap-4">
+	<section class="grid grid-cols-1 pt-8 gap-4 px-4 md:grid-cols-[75%_25%] md:px-0">
 
 		<!-- <section class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1800px] m-auto gap-x-9 gap-y-14 py-9">
 			<Card2 
@@ -59,27 +59,29 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(5)
 		</section> -->
 
 		<!-- <section class="grid grid-cols-4 max-w-[1800px] m-auto gap-x-9 gap-y-14 py-9"> -->
-		<section class="flex flex-col justify-start max-w-[1800px] gap-y-8">
-			<TituloMagic 
-			 primary_title="Ya Funciono"
-			 complement="Mariana" 
-		 />
+		<section class="order-2 max-w-[1800px] md:order-1">
+			<!-- <TituloMagic 
+				primary_title="Ya Funciono"
+				complement="Mariana" 
+			/> -->
 			
-			<ul>
+			<ul class="flex flex-col gap-y-4 md:gap-y-8">
 				{
 					randomPosts.map(post => {
 						const {title, image, category, description, author, date} = post.frontmatter
 						return (
-							<Card 
-								{title}
-								image={image.src}
-								{category}
-								{description}
-								author={author.name}
-								date={formatDate(date)}
-								imgAlt={image.alt}
-							/>
-							<a href={post.url}>Ver Post</a>
+							<li>
+								<Card 
+									{title}
+									image={image.src}
+									{category}
+									{description}
+									author={author.name}
+									date={formatDate(date)}
+									imgAlt={image.alt}
+									postSrc={post.url}
+								/>
+							</li>
 						)
 					})
 				}
@@ -119,8 +121,8 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(5)
 
 		</section>
 
-		<aside class="relative">
-			<div class="sticky top-8">
+		<aside class="relative order-1 md:order2 pb-6 md:pb-0">
+			<div class="md:sticky top-8">
 				<CategoriesList categories={allCategories} />
 			</div>
 		</aside>

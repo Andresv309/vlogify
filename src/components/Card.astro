@@ -1,6 +1,7 @@
 ---
 import InfoBubble from './InfoBubble.astro';
 import Button from './Button.astro';
+import { slugify } from '../utils/formatters';
 
 interface Props{
   image: string;
@@ -10,9 +11,10 @@ interface Props{
   author: string;
   date: string;
   imgAlt: string;
+  postSrc: string;
 }
 
-const { image, category,title,description,author,date,imgAlt} = Astro.props
+const { image, category, title, description, author, date, imgAlt, postSrc} = Astro.props
 ---
 
 <div id="card" class="grid grid-cols-2 relative rounded-3xl bg-[var(--background-color-card)] gap-[0.5rem] md:gap-[1.5rem] overflow-hidden md:h-[350px] h-full" >
@@ -26,8 +28,8 @@ const { image, category,title,description,author,date,imgAlt} = Astro.props
   </div>
 
   <div class="flex flex-col font-bold p-5 gap-2 h-full col-span-2 md:col-span-1 md:py-5 md:pr-5">
-    <a href="">
-      <h6 class= "w-fit uppercase text-xs text-[var(--color-category-text)] font-semibold py-1 px-2 rounded-md bg-[var(--color-category-bg)] cursor-context-menu inline-block">{category}</h6>
+    <a href={`/category/${slugify(category)}`}>
+      <h6 class= "w-fit uppercase text-xs text-[var(--color-category-text)] font-semibold py-1 px-2 rounded-md bg-[var(--color-category-bg)] menu inline-block">{category}</h6>
     </a>
     <div class="line-clamp-2">
       <h3 class="text-[1.75rem] font-bold py-1 px-1">
@@ -42,7 +44,7 @@ const { image, category,title,description,author,date,imgAlt} = Astro.props
     </div>
 
     <div class= "flex text-[var(--color-category-text)] font-normal justify-center pt-10">
-      <Button text="Leer más" style="secondary" href=""/>
+      <Button text="Leer más" style="secondary" href={postSrc}/>
     </div>
   </div>
 </div>

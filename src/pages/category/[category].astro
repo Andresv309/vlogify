@@ -40,6 +40,7 @@ export async function getStaticPaths () {
 
 const { category } = Astro.params
 const { categoryName, posts } = Astro.props
+// console.log(posts)
 ---
 
 <Layout title={categoryName}>
@@ -49,6 +50,7 @@ const { categoryName, posts } = Astro.props
       {
         posts.map(post => {
           const {title, image, category, description, author, date} = post.frontmatter
+          // console.log(category)
 						return (
 							<Card 
 								{title}
@@ -58,8 +60,9 @@ const { categoryName, posts } = Astro.props
 								author={author.name}
 								date={formatDate(date)}
 								imgAlt={image.alt}
+                postSrc={post.url}
 							/>
-            <a href={post.url}>Ver Post</a>
+            // <a href={post.url}>Ver Post</a>
           )
         })
       }

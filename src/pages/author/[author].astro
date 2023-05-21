@@ -57,6 +57,7 @@ const { authorName, posts } = Astro.props
 								author={author.name}
 								date={formatDate(date)}
 								imgAlt={image.alt}
+                postSrc={post.url}
 							/>
             <a href={post.url}>Ver Post</a>
           )
