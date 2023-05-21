@@ -7,7 +7,7 @@ author: {
   src: "/authorImages/sara-johnson.webp"
 }
 image: {
-  src: "/postImages/post-2.avif",
+  src: "/postImages/post-2.jpg",
   alt: "Imagen de portada para Consejos para una Gestión Efectiva del Tiempo",
 }
 description: La gestión efectiva del tiempo es esencial para la productividad y la reducción del estrés. Al implementar ciertas estrategias y técnicas, puedes aprovechar al máximo tu tiempo y lograr tus objetivos de manera eficiente.

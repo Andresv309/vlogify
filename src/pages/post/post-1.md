@@ -4,7 +4,7 @@ title: How to Come Back From Burnout
 date:  2023-02-14
 author: {
   name: "Henry Boisdequin",
-  src: "/authorImages/henry-boisdequin.webp"
+  src: "/authorImages/henry-boisdequin.jpg"
 }
 image: {
   src: "/postImages/post-1.avif",

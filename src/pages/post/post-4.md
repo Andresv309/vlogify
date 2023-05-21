@@ -4,10 +4,10 @@ title: Cómo Mantener una Rutina de Ejercicio Saludable
 date: 2023-05-19
 author: {
   name: "Carlos González",
-  src: "/authorImages/carlos-gonzalez.webp"
+  src: "/authorImages/carlos-gonzalez.jpg"
 }
 image: {
-  src: "/postImages/post-4.avif",
+  src: "/postImages/post-4.jpg",
   alt: "Imagen de portada para Cómo Mantener una Rutina de Ejercicio Saludable",
 }
 description: Descubre consejos y estrategias para mantener una rutina de ejercicio regular y saludable que te ayude a mantener un estilo de vida activo y en forma.

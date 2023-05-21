@@ -4,10 +4,10 @@ title: Cómo Cultivar una Mentalidad Positiva
 date: 2023-05-19
 author: {
   name: "Laura Hernández",
-  src: "/authorImages/laura-hernandez.webp"
+  src: "/authorImages/laura-hernandez.jpg"
 }
 image: {
-  src: "/postImages/post-3.avif",
+  src: "/postImages/post-3.jpg",
   alt: "Imagen de portada para Cómo Cultivar una Mentalidad Positiva",
 }
 description: Cultivar una mentalidad positiva puede tener un impacto significativo en tu bienestar y éxito. Descubre consejos y prácticas que te ayudarán a desarrollar una mentalidad positiva en tu vida diaria.
