@@ -6,6 +6,19 @@ import Navigator from '../components/Navigator.astro';
 import Title from '../components/Title.astro';
 import TituloMagic from '../components/Titulo-Magic.astro';
 import Layout from '../layouts/Layout.astro';
+
+const allPosts = await Astro.glob("./post/*.md")
+
+import { getMatchData, filterPostsBy } from "../utils/filters.js"
+const allCategories = await getMatchData(allPosts, "category")
+// console.log(allCategories)
+
+const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(5)
+
+console.log(randomPosts)
+
+
+
 ---
 
 <Layout title="Home Page">
@@ -45,6 +58,33 @@ import Layout from '../layouts/Layout.astro';
 		<section class="flex flex-col justify-start max-w-[1800px] gap-y-8">
 
 			<TituloMagic 
+			 primary_title="Ya Funciono"
+			 complement="Mariana" 
+		 />
+			
+			<ul>
+				{
+					randomPosts.map(post => {
+						const {title, image, category, description} = post.frontmatter
+						return (
+							<Card3 
+								{title}
+								image={image.src}
+								{category}
+								{description}
+							/>
+							<a href={post.url}>Ver Post</a>
+						)
+					})
+				}
+			</ul>
+
+
+
+
+
+		 <!-- <Card3
+			<TituloMagic 
 				primary_title="Ya Funciono"
 				complement="Mariana" 
 			/>
@@ -72,13 +112,15 @@ import Layout from '../layouts/Layout.astro';
 				category="Montañas"
 				title="Las montañas son Hermosas"
 				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio. Dolores quis, sit laborum repellat dignissimos optio"
-			/>
+			/> -->
 
 
 		</section>
 
-		<aside class="">
-			<CategoriesList />
+		<aside class="relative">
+			<div class="sticky top-8">
+				<CategoriesList categories={allCategories} />
+			</div>
 		</aside>
 	</section>
 
