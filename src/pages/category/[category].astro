@@ -1,28 +1,42 @@
 ---
 import Card3 from "../../components/Card3.astro";
 import Layout from "../../layouts/Layout.astro";
+import { getPagesFor } from "../../utils/filters";
 import { slugify } from "../../utils/formatters"
+
+// export async function getStaticPaths () {
+//   const allPosts = await Astro.glob("../post/*.md")
+//   const allCategories = [
+//     ...new Set(allPosts.map(post => {
+//       return post.frontmatter.category
+//     }
+//     ).flat())
+//   ]
+  
+//   return allCategories.map(categoryName => {
+//     const categoryPosts = allPosts.filter(post => post.frontmatter.category === categoryName)
+//     return {
+//       params: { category: slugify(categoryName) },
+//       props: {
+//         categoryName,
+//         posts: categoryPosts
+//       }
+//     }
+//   })
+// }
 
 export async function getStaticPaths () {
   const allPosts = await Astro.glob("../post/*.md")
-  const allCategories = [
-    ...new Set(allPosts.map(post => {
-      return post.frontmatter.category
-    }
-    ).flat())
-  ]
-  
-  return allCategories.map(categoryName => {
-    const categoryPosts = allPosts.filter(post => post.frontmatter.category === categoryName)
-    return {
-      params: { category: slugify(categoryName) },
-      props: {
-        categoryName,
-        posts: categoryPosts
-      }
-    }
+  // return await getPagesFor(allPosts, 'category', {
+  return await getPagesFor(allPosts, 'CATEGORY', {
+    // filterOutDrafts: false,
+    // filterOutFuturePosts: false,
+    sortByDate: false
+    // limit: 2
   })
 }
+
+
 
 const { category } = Astro.params
 const { categoryName, posts } = Astro.props

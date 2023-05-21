@@ -1,27 +1,39 @@
 ---
 import Card3 from "../../components/Card3.astro";
 import Layout from "../../layouts/Layout.astro";
+import { getPagesFor } from "../../utils/filters";
 import { slugify } from "../../utils/formatters"
+
+// export async function getStaticPaths () {
+//   const allPosts = await Astro.glob("../post/*.md")
+//   const allAuthors = [
+//     ...new Set(allPosts.map(post => {
+//       return post.frontmatter.author.name
+//     }
+//     ).flat())
+//   ]
+  
+
+//   return allAuthors.map(authorName => {
+//     const authorPosts = allPosts.filter(post => post.frontmatter.author.name === authorName)
+//     return {
+//       params: { author: slugify(authorName) },
+//       props: {
+//         authorName,
+//         posts: authorPosts
+//       }
+//     }
+//   })
+// }
 
 export async function getStaticPaths () {
   const allPosts = await Astro.glob("../post/*.md")
-  const allAuthors = [
-    ...new Set(allPosts.map(post => {
-      return post.frontmatter.author.name
-    }
-    ).flat())
-  ]
-  
-
-  return allAuthors.map(authorName => {
-    const authorPosts = allPosts.filter(post => post.frontmatter.author.name === authorName)
-    return {
-      params: { author: slugify(authorName) },
-      props: {
-        authorName,
-        posts: authorPosts
-      }
-    }
+  // return await getPagesFor(allPosts, 'category', {
+  return await getPagesFor(allPosts, 'AUTHOR', {
+    // filterOutDrafts: false,
+    // filterOutFuturePosts: false,
+    // sortByDate: false
+    // limit: 1
   })
 }
 
