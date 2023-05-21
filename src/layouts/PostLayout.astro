@@ -11,7 +11,7 @@ const { title, date, author, image, description, draft, category } = frontmatter
 <Layout {title} {description}>
   <article>
     <header>
-      <Title title= "Mi publicación" />
+      <!-- <Title title= "Mi publicación" /> -->
       <BannerPost
         {title}
         {category}
@@ -21,7 +21,7 @@ const { title, date, author, image, description, draft, category } = frontmatter
       />
     </header>
     
-    <div>
+    <div class="pt-4 px-4 md:px-0 md:pt-8">
       <slot />
     </div>
   </article>

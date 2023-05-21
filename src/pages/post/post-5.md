@@ -3,11 +3,11 @@ layout: "/src/layouts/PostLayout.astro"
 title: Los Beneficios del Mindfulness en la Vida Diaria
 date: 2023-05-19
 author: {
-  name: "Henry Boisdequin",
-  src: "/authorImages/maria-torres.webp"
+  name: "María Torres",
+  src: "/authorImages/maria-torres.jpg"
 }
 image: {
-  src: "/postImages/post-5.avif",
+  src: "/postImages/post-5.jpg",
   alt: "Imagen de portada para Los Beneficios del Mindfulness en la Vida Diaria",
 }
 description: Descubre los beneficios del mindfulness y cómo puedes incorporarlo en tu vida diaria para reducir el estrés, mejorar tu bienestar mental y encontrar mayor claridad y enfoque.

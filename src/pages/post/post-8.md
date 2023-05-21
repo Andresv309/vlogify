@@ -4,10 +4,10 @@ title: Los Beneficios de la Meditación Diaria
 date: 2023-05-20
 author: {
   name: "Alejandro Ramírez",
-  src: "/authorImages/alejandro-ramirez.webp"
+  src: "/authorImages/alejandro-ramirez.jpg"
 }
 image: {
-  src: "/postImages/post-8.avif",
+  src: "/postImages/post-8.jpg",
   alt: "Imagen de portada para Los Beneficios de la Meditación Diaria",
 }
 description: La meditación diaria es una práctica que puede traer numerosos beneficios para tu bienestar físico, mental y emocional. Descubre cómo dedicar unos minutos al día a la meditación puede mejorar tu calidad de vida.

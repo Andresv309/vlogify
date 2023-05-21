@@ -4,10 +4,10 @@ title: Cómo Cultivar Relaciones Saludables
 date: 2023-05-19
 author: {
   name: "Laura Sánchez",
-  src: "/authorImages/laura-sanchez.webp"
+  src: "/authorImages/laura-sanchez.jpg"
 }
 image: {
-  src: "/postImages/post-6.avif",
+  src: "/postImages/post-6.jpg",
   alt: "Imagen de portada para Cómo Cultivar Relaciones Saludables",
 }
 description: Aprende cómo cultivar relaciones saludables basadas en la comunicación efectiva, el respeto mutuo y el cuidado emocional.
