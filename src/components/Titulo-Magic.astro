@@ -1,0 +1,24 @@
+---
+interface Props{
+  primary_title: string;
+  complement: string;
+}
+
+const {primary_title,complement} = Astro.props;
+
+---
+<h1 class="text-6xl ">
+  <span>
+    {primary_title}
+  </span>
+
+  <span>  
+    {complement} 
+  </span>
+</h1>
+
+<style>
+  h1{
+    font-weight: 800;
+  }
+</style>

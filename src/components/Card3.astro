@@ -24,7 +24,7 @@ const { image, category,title,description } = Astro.props
 
   <div class="flex flex-col font-bold p-5 gap-2 h-full col-span-2 md:col-span-1 md:py-5 md:pr-5">
     <a href="">
-      <h6 class= "w-fit uppercase text-xs text-[var(--color-category-text)] font-semibold py-1 px-2 rounded-md bg-[var(--color-category-bg)] hover:bg-white/10 hover:text-white inline-block">{category}</h6>
+      <h6 class= "w-fit uppercase text-xs text-[var(--color-category-text)] font-semibold py-1 px-2 rounded-md bg-[var(--color-category-bg)] cursor-context-menu inline-block">{category}</h6>
     </a>
     <h3 class="text-[1.75rem] font-bold py-1 px-1">
       {title}
@@ -57,7 +57,6 @@ const { image, category,title,description } = Astro.props
 #contenedor_imagen:hover > img{
   filter: brightness(60%);
 }  */
-
 
 #card:hover #contenedor_imagen > div{
   visibility: visible;
