@@ -1,19 +1,19 @@
 ---
 interface Props{
-  primary_title: string;
-  complement: string;
+  value: string;
+  keyWord: string;
 }
 
-const {primary_title,complement} = Astro.props;
+const {value,keyWord} = Astro.props;
 
 ---
 <h1 class="font-black ">
   <span class="text-[70px]">
-    {primary_title}
+    {keyWord}
   </span>
 
   <span class="text-[100px]">  
-    {complement} 
+    {value} 
   </span>
 </h1>
 
