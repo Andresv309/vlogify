@@ -1,7 +1,7 @@
 ---
-import Card3 from "../../components/Card3.astro";
+import Card from "../../components/Card.astro";
 import Layout from "../../layouts/Layout.astro";
-import { slugify } from "../../utils/formatters"
+import { formatDate, slugify } from "../../utils/formatters"
 
 export async function getStaticPaths () {
   const allPosts = await Astro.glob("../post/*.md")
@@ -34,14 +34,17 @@ const { categoryName, posts } = Astro.props
     <div class="flex flex-col gap-4">
       {
         posts.map(post => {
-          const {title, image, category, description} = post.frontmatter
-          return (
-            <Card3 
-              {title}
-              image={image.src}
-              {category}
-              {description}
-            />
+          const {title, image, category, description, author, date} = post.frontmatter
+						return (
+							<Card 
+								{title}
+								image={image.src}
+								{category}
+								{description}
+								author={author.name}
+								date={formatDate(date)}
+								imgAlt={image.alt}
+							/>
             <a href={post.url}>Ver Post</a>
           )
         })

@@ -1,15 +1,16 @@
 ---
 import Card1 from '../components/Card1.astro';	
-import Card3 from '../components/Card3.astro';
+import Card from '../components/Card.astro';
 import CategoriesList from '../components/CategoriesList.astro';
 import Navigator from '../components/Navigator.astro';
 import Title from '../components/Title.astro';
-import TituloMagic from '../components/Titulo-Magic.astro';
+import TituloMagic from '../components/MagicTitle.astro';
 import Layout from '../layouts/Layout.astro';
 
 const allPosts = await Astro.glob("./post/*.md")
 
 import { getMatchData, filterPostsBy } from "../utils/filters.js"
+import { formatDate } from '../utils/formatters';
 const allCategories = await getMatchData(allPosts, "category")
 // console.log(allCategories)
 
@@ -47,7 +48,7 @@ console.log(randomPosts)
 				category="Montañas"
 				title="Las montañas son Hermosas"
 			/>
-			<Card3 
+			<Card 
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"
@@ -65,13 +66,16 @@ console.log(randomPosts)
 			<ul>
 				{
 					randomPosts.map(post => {
-						const {title, image, category, description} = post.frontmatter
+						const {title, image, category, description, author, date} = post.frontmatter
 						return (
-							<Card3 
+							<Card 
 								{title}
 								image={image.src}
 								{category}
 								{description}
+								author={author.name}
+								date={formatDate(date)}
+								imgAlt={image.alt}
 							/>
 							<a href={post.url}>Ver Post</a>
 						)
@@ -79,35 +83,31 @@ console.log(randomPosts)
 				}
 			</ul>
 
-
-
-
-
-		 <!-- <Card3
+		 <!-- <Card
 			<TituloMagic 
 				primary_title="Ya Funciono"
 				complement="Mariana" 
 			/>
 
-		 <Card3
+		 <Card
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"
 				description="	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio. Dolores quis, sit laborum repellat dignissimos optio"
 			/>
-			<Card3
+			<Card
 				image="/post-1.avif"
 				category="Tokio"
 				title=" La primavera tokiota en su máximo esplendor"
 				description="	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio."
 			/>
-			<Card3
+			<Card
 				image="/Infidelidad.webp"
 				category="Infidelidades"
 				title="Infidelidad: causas, tipos y soluciones"
 				description="	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio."
 			/>
-			<Card3
+			<Card
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"
