@@ -1,14 +1,16 @@
 ---
 import Card1 from '../components/Card1.astro';	
-import Card3 from '../components/Card3.astro';
+import Card from '../components/Card.astro';
 import CategoriesList from '../components/CategoriesList.astro';
 import Navigator from '../components/Navigator.astro';
 import Title from '../components/Title.astro';
+import TituloMagic from '../components/MagicTitle.astro';
 import Layout from '../layouts/Layout.astro';
 
 const allPosts = await Astro.glob("./post/*.md")
 
 import { getMatchData } from "../utils/filters.js"
+import { formatDate } from '../utils/formatters';
 // const allCategories = await getMatchData(allPosts, "category")
 const allCategories = await getMatchData(allPosts, "CATEGORY")
 // console.log(allCategories)
@@ -49,7 +51,7 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(5)
 				category="Montañas"
 				title="Las montañas son Hermosas"
 			/>
-			<Card3 
+			<Card 
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"
@@ -58,48 +60,56 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(5)
 
 		<!-- <section class="grid grid-cols-4 max-w-[1800px] m-auto gap-x-9 gap-y-14 py-9"> -->
 		<section class="flex flex-col justify-start max-w-[1800px] gap-y-8">
-
+			<TituloMagic 
+			 primary_title="Ya Funciono"
+			 complement="Mariana" 
+		 />
+			
 			<ul>
 				{
 					randomPosts.map(post => {
-						const {title, image, category, description} = post.frontmatter
+						const {title, image, category, description, author, date} = post.frontmatter
 						return (
-							<Card3 
+							<Card 
 								{title}
 								image={image.src}
 								{category}
 								{description}
+								author={author.name}
+								date={formatDate(date)}
+								imgAlt={image.alt}
 							/>
 							<a href={post.url}>Ver Post</a>
 						)
 					})
 				}
-
-
-
 			</ul>
 
+		 <!-- <Card
+			<TituloMagic 
+				primary_title="Ya Funciono"
+				complement="Mariana" 
+			/>
 
-
-		 <!-- <Card3
+		 <Card
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"
 				description="	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio. Dolores quis, sit laborum repellat dignissimos optio"
 			/>
-			<Card3
+			<Card
 				image="/post-1.avif"
 				category="Tokio"
 				title=" La primavera tokiota en su máximo esplendor"
 				description="	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio."
 			/>
-			<Card3
+			<Card
 				image="/Infidelidad.webp"
 				category="Infidelidades"
 				title="Infidelidad: causas, tipos y soluciones"
 				description="	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio."
 			/>
-			<Card3
+			<Card
 				image="/ejemploCard.jpg"
 				category="Montañas"
 				title="Las montañas son Hermosas"

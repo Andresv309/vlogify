@@ -1,24 +1,22 @@
 ---
 interface Props{
-  parametro1?: string;
-  parametro2: string;
-   
+  keyWord?: string;
+  message: string;
 }
 
 const{
-  parametro1,
-  parametro2
+  keyWord,
+  message
 } = Astro.props;
-
 
 ---
 
 <div class="flex flex-col border-l-2 py-1 px-2 mb-2 text-xs text-[var(--color-info-text)]">
   <span class="text-[0.5rem]">
-    {parametro1}
+    {keyWord}
   </span>
   <span class=text-[0.7rem]">
-    {parametro2}
+    {message}
   </span>
 </div>
 

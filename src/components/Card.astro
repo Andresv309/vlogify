@@ -1,63 +1,86 @@
 ---
-export interface Props {
-	title: string;
-	body: string;
-	href: string;
+import InfoBubble from './InfoBubble.astro';
+import Button from './Button.astro';
+
+interface Props{
+  image: string;
+  category: string;
+  title: string;
+  description: string;
+  author: string;
+  date: string;
+  imgAlt: string;
 }
 
-const { href, title, body } = Astro.props;
+const { image, category,title,description,author,date,imgAlt} = Astro.props
 ---
 
-<li class="link-card">
-	<a href={href}>
-		<h2>
-			{title}
-			<span>&rarr;</span>
-		</h2>
-		<p>
-			{body}
-		</p>
-	</a>
-</li>
-<style>
-	.link-card {
-		list-style: none;
-		display: flex;
-		padding: 0.25rem;
-		background-color: white;
-		background-image: none;
-		background-size: 400%;
-		border-radius: 0.6rem;
-		background-position: 100%;
-		transition: background-position 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-		box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
-	}
+<div id="card" class="grid grid-cols-2 relative rounded-3xl bg-[var(--background-color-card)] gap-[0.5rem] md:gap-[1.5rem] overflow-hidden md:h-[350px] h-full" >
 
-	.link-card > a {
-		width: 100%;
-		text-decoration: none;
-		line-height: 1.4;
-		padding: 1rem 1.3rem;
-		border-radius: 0.35rem;
-		color: #111;
-		background-color: white;
-		opacity: 0.8;
-	}
-	h2 {
-		margin: 0;
-		font-size: 1.25rem;
-		transition: color 0.6s cubic-bezier(0.22, 1, 0.36, 1);
-	}
-	p {
-		margin-top: 0.5rem;
-		margin-bottom: 0;
-		color: #444;
-	}
-	.link-card:is(:hover, :focus-within) {
-		background-position: 0;
-		background-image: var(--accent-gradient);
-	}
-	.link-card:is(:hover, :focus-within) h2 {
-		color: rgb(var(--accent));
-	}
+  <div id="contenedor_imagen" class="relative col-span-2 md:col-span-1 overflow-hidden">
+    <img src={image} alt={imgAlt} class="h-full w-full object-cover rounded-b-none md:rounded-3xl" >
+    <div class="flex flex-row absolute bottom-0 right-0 pb-3.5 pr-1">
+      <InfoBubble message={author} keyWord="Escrito por"/>
+      <InfoBubble message={date} keyWord="Publicado el"/>
+    </div>
+  </div>
+
+  <div class="flex flex-col font-bold p-5 gap-2 h-full col-span-2 md:col-span-1 md:py-5 md:pr-5">
+    <a href="">
+      <h6 class= "w-fit uppercase text-xs text-[var(--color-category-text)] font-semibold py-1 px-2 rounded-md bg-[var(--color-category-bg)] cursor-context-menu inline-block">{category}</h6>
+    </a>
+    <div class="line-clamp-2">
+      <h3 class="text-[1.75rem] font-bold py-1 px-1">
+        {title}
+      </h3>
+    </div>
+    <div class="line-clamp-4">
+    <!-- <div class="overflow-hidden h-24 "> -->
+      <p class="font-light">
+        {description}
+      </p>
+    </div>
+
+    <div class= "flex text-[var(--color-category-text)] font-normal justify-center pt-10">
+      <Button text="Leer más" style="secondary" href=""/>
+    </div>
+  </div>
+</div>
+
+<style>
+#card #contenedor_imagen > div{
+  visibility: hidden;
+  opacity: 0%;
+  transform: translatey(11%);
+  transition: 0.7s;
+}
+/* #contenedor_imagen:hover > div{
+  visibility: visible;
+  opacity: 100%;
+  transform: translatey(-10%);
+}
+#contenedor_imagen:hover > img{
+  filter: brightness(60%);
+}  */
+
+#card:hover #contenedor_imagen > div{
+  visibility: visible;
+  opacity: 100%;
+  transform: translatey(-10%);
+}
+
+#card #contenedor_imagen > img{
+  /* transition: filter 700ms ease-in-out; */
+  /* transition: all 700ms ease-in-out; */
+  transition: 0.3s;
+}
+#card:hover #contenedor_imagen > img{
+  filter: brightness(60%);
+  /* opacity: 0.6; */
+}
+
+/* p {
+  -webkit-line-clamp: 2;
+} */
+
 </style>
