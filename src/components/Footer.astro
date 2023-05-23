@@ -1,0 +1,27 @@
+--- 
+import { Icon } from "astro-icon";
+
+---
+
+<footer class="pt-36">
+  <div class="flex flex-col items-center bg-[var(--background-color)] border-t border-emerald-200 pt-4">
+    <h3 class="text-[1.5rem] font-bold">Blog Personal</h3>
+
+    <!-- <p class="text-center px-28 pt-5 w-10/12">
+      Descubre contenido fascinante y enriquecedor en nuestra página web de blogs. Explora una amplia variedad de temas, desde tecnología y ciencia hasta estilo de vida y viajes. Únete a nuestra comunidad, comparte tus ideas y comentarios, y sumérgete en un mundo de nuevas perspectivas, inspiración y conocimiento. ¡Explora los blogs y déjate llevar por la aventura!
+    </p> -->
+
+    <ul class="flex flex-row pt-6 items-center gap-1  border-b-2 border-b-[var(--color-text)] ">
+      <li class="hover:text-[#1778F2] hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="mdi:facebook-box" width="35"/></a></li>
+      <li class="hover:text-slate-500 hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="mdi:github-box" width="35"/></a></li>
+      <li class="hover:text-red-500 hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="bx:bxl-gmail" width="33"/></a></li>
+      <li class="hover:text-[#00ACEE] hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="mdi:twitter-box" width="35"/></a></li>
+      <li class="pl-1 hover:text-[#0072B1] hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="uiw:linkedin" width="27"/></a></li>
+    </ul>
+
+    <div class="pt-8 text-zinc-500 text-[14px]">
+      <p>copyrigth &copy;2023 | AvCv.company.org | disigned by AvCv.Disinged | Todos los derechos reservados</p>
+
+    </div>
+  </div>
+</footer>
