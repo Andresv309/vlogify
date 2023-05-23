@@ -2,6 +2,7 @@
 import InfoBubble from './InfoBubble.astro';
 import Button from './Button.astro';
 import { slugify } from '../utils/formatters';
+import ButtonReadMore from './ButtonReadMore.astro';
 
 interface Props{
   image: string;
@@ -43,8 +44,9 @@ const { image, category, title, description, author, date, imgAlt, postSrc} = As
       </p>
     </div>
 
-    <div class= "flex text-[var(--color-category-text)] font-normal justify-center pt-10">
-      <Button text="Leer más" style="secondary" href={postSrc}/>
+    <div class= "flex text-[var(--color-category-text)] font-normal justify-center pt-6">
+      <!-- <Button text="Leer más" style="secondary" href={postSrc}/> -->
+      <ButtonReadMore text="Leer Más"  href={postSrc}/>
     </div>
   </div>
 </div>

@@ -15,6 +15,8 @@ draft: false
 category: Salud y Bienestar
 ---
 
+# Cómo Mejorar tu Postura y Evitar Problemas de Espalda
+
 La postura es un factor clave para la salud de nuestra columna vertebral y el bienestar general de nuestro cuerpo. Una mala postura puede provocar dolores de espalda, tensión muscular y otros problemas relacionados. A continuación, te ofrecemos algunos consejos prácticos para mejorar tu postura y evitar problemas de espalda:
 
 **1. Mantén una buena alineación de la columna vertebral:**

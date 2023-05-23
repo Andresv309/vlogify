@@ -1,0 +1,68 @@
+---
+interface Props{
+  text: string;
+  href: string;
+}
+
+const{text,href}=Astro.props
+
+---
+  <button class="learn-more relative inline-block cursor-pointer outline-none border-0 align-middle bg-transparent p-0 text-inherit w-[10rem] h-auto">
+    <span class="circle relative block m-0 w-[2.8rem] h-[2.8rem] bg-[--secondary-color] rounded-[1.625rem] " aria-hidden="true">
+      <span class="icon arrow absolute top-1 bottom-0 m-auto bg-white"></span>
+    </span>
+    <a href={href}>
+      <span class="button-text absolute top-2.5 left-6 right-0 bottom-0 p-[0.75rem 0] m-[0 0 0 1.85rem] text-[#979595] font-[700] text-center i leading-[1.6] uppercase">{text}</span>
+    </a>
+
+  </button>
+
+
+<style>
+
+button.learn-more .circle {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+button.learn-more .circle .icon {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+button.learn-more .circle .icon.arrow {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.046, 1);
+ left: 0.625rem;
+ width: 1.125rem;
+ height: 0.125rem;
+ background: none;
+}
+
+button.learn-more .circle .icon.arrow::before {
+ position: absolute;
+ content: "";
+ top: -0.29rem;
+ right: 0.0625rem;
+ width: 0.625rem;
+ height: 0.625rem;
+ border-top: 0.125rem solid #fff;
+ border-right: 0.125rem solid #fff;
+ transform: rotate(45deg);
+}
+
+button.learn-more .button-text {
+ transition: all 0.45s cubic-bezier(0.65, 0, 0.076, 1);
+}
+
+button:hover .circle {
+ width: 100%;
+}
+
+button:hover .circle .icon.arrow {
+ background: #fff;
+ transform: translate(1rem, 0);
+}
+
+button:hover .button-text {
+ color: #fff;
+}
+
+</style>
