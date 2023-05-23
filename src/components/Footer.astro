@@ -7,7 +7,7 @@ import { getMatchData } from "../utils/filters";
 const allPosts = await Astro.glob("../pages/post/*md")
 const allCategories = await getMatchData(allPosts, "CATEGORY")
 
-const relevantCategories = allCategories.sort(()=> Math.random() - 0.5).slice(0,4)
+const relevantCategories = allCategories.sort(()=> Math.random() - 0.5).slice(0,5)
 
 
 ---
