@@ -23,6 +23,9 @@
 
 
 <style>
+  :global(.dark) {
+    color-scheme: dark-theme;
+  }
 
   label {
   align-items: center;
@@ -59,11 +62,3 @@ label .sun-moon {
 }
 </style>
 
-<script>
-  const btnChangeThemeColor = document.querySelector("#toggle-button")
-  btnChangeThemeColor.addEventListener("click", () => {
-    document.body.classList.toggle("light-theme")
-  })
-
-
-</script>
