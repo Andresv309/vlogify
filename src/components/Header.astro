@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+import Link from "./Link.astro";
 
 ---
 
@@ -11,7 +12,14 @@ import Button from "./Button.astro";
     </a>
   </div>
 
-  <div>
+  <div class="flex gap-4 sm:gap-8">
+    <Link 
+      text="Publicaciones"
+      href="/post"
+      icon="mdi:bookshelf"
+      useColor={false}
+    />
+
     <button id="btn-changeThemeColor">
       Cambiar Color
     </button>

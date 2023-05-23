@@ -1,11 +1,20 @@
 ---
 import BannerPost from "../components/BannerPost.astro";
+import Card from "../components/Card.astro";
 import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
+import { filterBlogPosts } from "../utils/filters";
+import { formatDate } from "../utils/formatters";
 
 const { frontmatter } = Astro.props
 const { title, date, author, image, description, draft, category } = frontmatter
 // console.log(frontmatter)
+const allPosts = await Astro.glob("../pages/post/*.md")
+const categoryPosts = await filterBlogPosts(allPosts, {matchCondition: {condition: 'CATEGORY', conditionValue: category}, sortByDate: false})
+const relatedPosts = categoryPosts.filter(post => post.frontmatter.title !== title)
+// console.log(categoryPosts)
+const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0,3)
+
 ---
 
 <Layout {title} {description}>
@@ -21,21 +30,40 @@ const { title, date, author, image, description, draft, category } = frontmatter
       />
     </header>
     
-    <div class="pt-4 px-4 md:px-0 md:pt-8">
+    <div class="pt-4 px-4 md:px-0 md:pt-8 text-[var(--color-text)] prose-strong:text-[var(--color-text)] prose prose-neutral dark:prose-invert prose-headings:text-blue-600 max-w-none">
       <slot />
     </div>
   </article>
 
   <section class="my-8">
-    <h2 class="text-xl">
+    <h2 class="text-2xl pb-8">
       <strong>También te podría interesar</strong>
     </h2>
 
-    <!-- <Card1 
-      image="/ejemploCard.jpg"
-      category="Montañas"
-      title="Las montañas son Hermosas"
-    /> -->
+    <ul class="flex flex-col gap-y-4 md:gap-y-8">
+      {
+        relatedPosts.map(post => {
+          // const {title, image, category, description, author, date} = post.frontmatter
+          const {title, image, category, description, author, date} = post.frontmatter
+          return (
+            <li>
+              <Card 
+                {title}
+                image={image.src}
+                {category}
+                {description}
+                author={author.name}
+                date={formatDate(date)}
+                imgAlt={image.alt}
+                postSrc={post.url}
+              />
+            </li>
+          )
+        })
+      }
+    </ul>
 
   </section>
+
+
 </Layout>

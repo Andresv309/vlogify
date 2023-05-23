@@ -63,12 +63,23 @@ async function getUniquesForCondition(allPosts, matchCondition) {
 }
 
 
-export function filterBlogPosts(posts, {
+export function filterBlogPosts(allPosts, {
   filterOutDrafts = true,
   filterOutFuturePosts = true,
   sortByDate = true,
   limit = undefined,
+  matchCondition = {
+    condition: '',
+    conditionValue: '',
+  }
 } = {}) {
+
+  let posts = allPosts
+
+  if (POST_FRONTMATTER_PAGES[matchCondition.condition]) {
+    const pagePath = POST_FRONTMATTER_PAGES[matchCondition.condition].path
+    posts = allPosts.filter(post => getValue(post.frontmatter, pagePath) === matchCondition.conditionValue)
+  }
 
   // Filter draft and future posts
   const filteredPosts = posts.reduce((acc, post) => {
@@ -90,8 +101,6 @@ export function filterBlogPosts(posts, {
   } else {
     filteredPosts.sort(() => Math.random() - 0.5)
   }
-
-  // console.log({limit, filteredPosts});
 
   // Limit the number of posts passed
   if (typeof limit === 'number') {
