@@ -1,0 +1,42 @@
+---
+import Link from "./Link.astro"
+import Button from "./Button.astro"
+
+const { prevUrl, nextUrl, currentPage, lastPage } = Astro.props
+---
+
+<nav aria-label="Blog pages" class="flex justify-center gap-4 items-center">
+  {
+    prevUrl && (
+      <Button
+        text="Anterior"
+        href={prevUrl}
+        style="primary"
+        borderVisible={true}
+        isFilled={false}
+        icon={{
+          name:"tabler:arrow-big-left-line",
+          side: "left"
+        }}
+      />
+    )
+  }
+  <span class="p-1">
+    {currentPage}/{lastPage}
+  </span>
+  {
+    nextUrl && (
+      <Button
+        text="Siguiente"
+        href={nextUrl}
+        style="primary"
+        borderVisible={true}
+        isFilled={false}
+        icon={{
+          name:"tabler:arrow-big-right-line",
+          side: "right"
+        }}
+      />
+    )
+  }
+</nav>

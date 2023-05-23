@@ -13,6 +13,32 @@ const formattedDate = formatDate(date)
 
 <figure class="relative w-full h-full mt-3">
   <img src={image.src} alt={image.alt}>
+  <div class="sm:block">
+    <div class="flex sm:absolute bottom-0 left-0 pl-4 py-4 backdrop-blur-sm w-full sm:text-white text-[var(--color-text)]" >
+      <div class="flex items-center border-r-2 border-gray-400">
+        <img src="/favicon.svg" alt="" class="w-16 sm:w-12">
+      </div>
+      <div class="flex flex-col pl-4 gap-3">
+        <div>
+          <Link text={category} href={`/category/${slugCategory}`} useColor={false}/>
+          <Title title={title}/>
+        </div>
+        <div class="flex text-xs px-2">
+          <a href={`/author/${slugAuthor}`} class="flex gap-1.5 items-center">
+            <img src={author.src} alt={`Foto de ${author.name}`} width="25" class="rounded-full">
+            <span>{author.name}</span>
+          </a>        
+          <span class="h-full flex items-center">
+            &nbsp;•&nbsp;{formattedDate}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</figure>
+
+<!-- <figure class="relative w-full h-full mt-3">
+  <img src={image.src} alt={image.alt}>
   <div class="hidden sm:block">
     <div class="flex absolute bottom-0 left-0 pl-4 py-4 backdrop-blur-sm w-full text-white" >
       <div class="flex items-center border-r-2 border-gray-400">
@@ -36,7 +62,7 @@ const formattedDate = formatDate(date)
     </div>
   </div>
   <div class="block sm:hidden">
-    <div class="flex bottom-0 left-0 pl-4 py-4 backdrop-blur-sm w-full text-white" >
+    <div class="flex bottom-0 left-0 pl-4 py-4 backdrop-blur-sm w-full text-[var(--color-text)]" >
       <div class="flex items-center border-r-2 border-gray-400">
         <img src="/favicon.svg" alt="" width="70">
       </div>
@@ -54,40 +80,6 @@ const formattedDate = formatDate(date)
             &nbsp;•&nbsp;{formattedDate}
           </span>
         </div>
-      </div>
-    </div>
-  </div>
-</figure>
-
-<!-- <figure class="relative w-full h-full mt-3">
-  <img src={image.src} alt={image.alt}>
-  <div class="flex absolute bottom-0 left-0 pl-4 py-4 backdrop-blur-sm w-full">
-    <div class="flex items-center border-r-2 border-gray-400">
-      <img src="/favicon.svg" alt="" width="45">
-    </div>
-    <div class="flex flex-col pl-4 gap-3">
-      <div>
-        <Link text={category} href="/"/>
-        <Title title={title}/>
-      </div>
-      <div class="flex items-center text-xs"> -->
-      <!-- <div class="grid items-center text-sm grid-cols-2"> -->
-        <!-- <a href="/" class="flex gap-1.5">
-          <img src={author.src} alt={`Foto de ${author.name}`} width="25" class="rounded-full">
-          <span>{`${author.name} • ${date}`}</span>
-          <span>{`${author.name} •`}</span>
-        </a>
-        <span>{`${date}`}</span> -->
-
-
-        <!-- <a href="/" class="flex gap-1.5">
-          <img src={author.src} alt={`Foto de ${author.name}`} width="25" class="rounded-full">
-          <span>{`${author.name}`}</span>
-        </a>
-        •
-        <span class="h-full">
-          {`${date}`}
-        </span>
       </div>
     </div>
   </div>

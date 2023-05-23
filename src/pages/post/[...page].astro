@@ -1,0 +1,76 @@
+---
+import Card from "../../components/Card.astro";
+import Pagination from "../../components/Pagination.astro";
+// import PostsList from "../../components/PostsList";
+// import PostsList from "../../components/PostsList.astro"
+import PostsList from "../../components/PostsList.jsx"
+import SearchBar from "../../components/SearchBar.astro";
+import Title from "../../components/Title.astro";
+import Layout from "../../layouts/Layout.astro";
+import { filterBlogPosts } from "../../utils/filters";
+import { formatDate } from "../../utils/formatters";
+// import debounce from 'just-debounce-it'
+// import debounce from "../../../node_modules/just-debounce-it"
+
+// console.log(allPosts)
+
+
+export async function getStaticPaths ({ paginate }) {
+  const allPosts = await Astro.glob("./*.md")
+  const filterPosts = await filterBlogPosts(allPosts)
+  
+  return paginate(filterPosts, {
+    pageSize: 3,
+    props: {
+      posts: filterPosts,
+    }
+  })
+}
+
+const { page, posts } = Astro.props;
+console.log(Astro.props)
+---
+
+<Layout title="Posts">
+  <header class="flex flex-col gap-4 px-2 sm:px-0">
+    <Title title="Todos Los Posts"></Title>
+    <SearchBar />
+  </header>
+  <section class="pt-8">
+    <ul class="flex flex-col gap-y-4 md:gap-y-8" id="hola">
+      {
+        page.data.map(post => {
+          const {title, image, category, description, author, date} = post.frontmatter
+          return (
+            <li>
+              <Card 
+              {title}
+              image={image.src}
+              {category}
+              {description}
+              author={author.name}
+              date={formatDate(date)}
+              imgAlt={image.alt}
+              postSrc={post.url}
+            />
+            </li>
+          )
+        })
+      }
+    </ul>
+  </section>
+  <section class="py-8">
+    <Pagination
+      prevUrl={page.url.prev}
+      nextUrl={page.url.next}
+      currentPage={page.currentPage}
+      lastPage={page.lastPage}
+    />
+  </section>
+
+  <!-- <PostsList client:load posts={page.data}/> -->
+  <!-- <PostsList client:only posts={posts}/> -->
+
+</Layout>
+
+

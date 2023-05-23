@@ -15,7 +15,7 @@ import { formatDate } from '../utils/formatters';
 const allCategories = await getMatchData(allPosts, "CATEGORY")
 // console.log(allCategories)
 
-const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(5)
+const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0, 5)
 
 // console.log(randomPosts)
 
