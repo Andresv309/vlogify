@@ -1,5 +1,6 @@
 ---
 import Button from "./Button.astro";
+import ButtonMode from "./ButtonMode.astro";
 import Link from "./Link.astro";
 
 ---
@@ -8,7 +9,7 @@ import Link from "./Link.astro";
   <div class="flex items-center gap-2">
     <a href="/" class="flex items-center">
       <img src="/favicon.svg" alt="Logo Blog">
-      <span>Blog</span>
+      <span class="text-xl font-black ">Blog</span>
     </a>
   </div>
 
@@ -20,15 +21,6 @@ import Link from "./Link.astro";
       useColor={false}
     />
 
-    <button id="btn-changeThemeColor">
-      Cambiar Color
-    </button>
+    <ButtonMode/>
   </div>
 </header>
-
-<script>
-  const btnChangeThemeColor = document.querySelector("#btn-changeThemeColor")
-  btnChangeThemeColor.addEventListener("click", () => {
-    document.body.classList.toggle("light-theme")   
-  })
-</script>

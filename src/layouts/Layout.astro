@@ -1,6 +1,7 @@
 ---
 import Button from '../components/Button.astro';
 import Card1 from '../components/Card1.astro';
+import Footer from '../components/Footer.astro';
 import Header from '../components/Header.astro';
 
 export interface Props {
@@ -30,6 +31,8 @@ const {
 		<main class="md:p-8">
 			<slot />
 		</main>
+
+		<Footer/>
 
 	</body>
 </html>
@@ -92,6 +95,9 @@ const {
 		--shadow-color: 289deg 4% 20%; 
 
 	}
+	.lunaIcon{
+   color: rgb(221, 21, 21);
+  }
 
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,

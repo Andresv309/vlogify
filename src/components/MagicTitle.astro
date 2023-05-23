@@ -1,7 +1,7 @@
 ---
 interface Props{
   value: string;
-  keyWord: string;
+  keyWord?: string;
   size:string;
 }
 
@@ -9,10 +9,10 @@ const {value,keyWord,size} = Astro.props;
 
 ---
 <div class="flex font-black">
-  <h1 class="text-[70px] leading-[4.5rem]">
+  <h1 class="text-[45px] px-4 leading-[4.5rem] sm:text-[70px]  md:px-0 break-words">
       {keyWord}
 
-    <span id="span_Efect" style=`--content: "${value}"; --start-color: #007CF0; --end-color: #00DFD8  ` class=`text-[${size}px] block uppercase pl-24 pb-12`>  
+    <span id="span_Efect" style=`--content: "${value}"; --start-color: #007CF0; --end-color: #00DFD8  ` class=`text-[${size}px] block uppercase md:pl-24 pb-12`>  
       {value}  
     </span>
   </h1>
@@ -20,40 +20,6 @@ const {value,keyWord,size} = Astro.props;
 
 
 <style>
-
-/* #span_Efect{
-  color: white;
-  display: block;
-  letter-spacing: -.04em;
-  line-height: 1.1;
-  position: relative;
-
-
-}
-
-@keyframes anim{
-  0%{background: linear-gradient(90deg, var(--start-color),var(--end-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;}
-  50%{background: linear-gradient(90deg, #7928CA, #FF0080); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  /* 50%{background: linear-gradient(90deg, #7928CA, #FF0080); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-  75%{background: linear-gradient(90deg, var(--start-color),var(--end-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent;} */
-  /* 100%{background: linear-gradient(90deg, var(--start-color),var(--end-color)); -webkit-background-clip: text; -webkit-text-fill-color: transparent; }
-} */
-
-/* #span_Efect::before{
-  background: linear-gradient(90deg, var(--start-color),var(--end-color));
-  position: absolute;
-  content: var(--content);
-  inset: 0; 
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-  animation: anim 5s infinite;
-  transition-timing-function: ease-in-out;
-}  */
-
-
-
-
 h1{
   letter-spacing: -.05em;
   line-height: 1.1;
@@ -71,19 +37,7 @@ span {
 }
 
 @keyframes fluido {
-    /* 0% { background-position: 0 50% }
-    50% { background-position: 100% 50% }
-    100% { background-position: 0 50% } */
-
   0%{background-position: left;}
   100%{background-position: right;}
 }
-/* 
-@keyframes fluido {
-    0% { background-position: 0 50% }
-    100% { background-position: 100% 50% }
-} */
-
-
-
 </style>
