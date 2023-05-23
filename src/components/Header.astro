@@ -1,11 +1,12 @@
 ---
 import Button from "./Button.astro";
 import ButtonMode from "./ButtonMode.astro";
+// import Themesswitch from "./Themeswitch.astro";
 import Link from "./Link.astro";
 
 ---
 
-<header class="flex justify-between items-center py-4 px-2 bg-[var(--background-color)] shadow-xl">
+<header class="flex justify-between items-center py-4 px-4 bg-[var(--background-color)] shadow-xl">
   <div class="flex items-center gap-2">
     <a href="/" class="flex items-center">
       <img src="/favicon.svg" alt="Logo Blog">
@@ -13,14 +14,50 @@ import Link from "./Link.astro";
     </a>
   </div>
 
-  <div class="flex gap-4 sm:gap-8">
-    <Link 
-      text="Publicaciones"
-      href="/post"
-      icon="mdi:bookshelf"
-      useColor={false}
-    />
+  <div class="hidden sm:block">
+    <div class="flex gap-4 sm:gap-8">
 
-    <ButtonMode/>
+      <Link 
+        text="Publicaciones"
+        href="/post"
+        icon="mdi:bookshelf"
+        useColor={false}
+      />
+  
+      <ButtonMode/>
+    </div>
+  </div>
+
+  <div class="block sm:hidden">
+    <!-- <div class="flex gap-8 sm:gap-8"> -->
+      <button id="toggleMenuBar">
+        <div class="flex flex-col gap-1.5">
+          <span class="block h-0.5 w-8 bg-[var(--secondary-color)]"></span>
+          <span class="block h-0.5 w-8 bg-[var(--secondary-color)]"></span>
+          <span class="block h-0.5 w-8 bg-[var(--secondary-color)]"></span>
+        </div>
+      </button>
+      <div id="menuBar" class="hidden absolute right-4 top-[80px] z-10">
+        <div class="flex flex-col gap-4 bg-[var(--background-color-card)] p-4 rounded-md border-[1px] border-[var(--secondary-color)]">
+          <Link 
+            text="Publicaciones"
+            href="/post"
+            icon="mdi:bookshelf"
+            useColor={false}
+          />
+      
+          <ButtonMode/>
+        </div>
+      </div>
+    <!-- </div> -->
   </div>
 </header>
+
+<script>
+  const toggleMenuBar = document.querySelector("#toggleMenuBar")
+  const menuBar = document.querySelector("#menuBar")
+  toggleMenuBar.addEventListener("click", () => {
+    menuBar.classList.toggle("hidden")
+    // menuBar.classList.remove("hidden")
+  })
+</script>

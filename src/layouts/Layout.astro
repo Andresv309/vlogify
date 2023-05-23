@@ -21,6 +21,7 @@ const {
 		<meta charset="UTF-8" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="color-scheme" content="dark light" />
 		<meta name="generator" content={Astro.generator} />
 		<meta name="description" content={description}>
 		<title>Blog personal | {title}</title>
@@ -97,7 +98,7 @@ const {
 
 	}
 	.lunaIcon{
-   color: rgb(221, 21, 21);
+  	color: rgb(221, 21, 21);
   }
 
 	code {
@@ -129,3 +130,20 @@ body::-webkit-scrollbar-thumb {
   border-radius: 4px;
 }
 </style>
+
+
+<script is:inline>
+  const btnChangeThemeColor = document.querySelector("#toggle-button");
+  const theme = localStorage.getItem("theme") ?? "dark-theme"
+  btnChangeThemeColor.checked = theme === "light-theme"
+  toggleTheme(theme)
+
+  btnChangeThemeColor.addEventListener("change", () => {
+    const theme = btnChangeThemeColor.checked ? "light-theme" : "dark-theme"
+    localStorage.setItem("theme", theme)
+    toggleTheme(theme)
+  })
+
+  function toggleTheme (theme) {document.body.classList.toggle("light-theme", theme === "light-theme")}
+  
+</script>
