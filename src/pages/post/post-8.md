@@ -4,7 +4,7 @@ title: Los Beneficios de la Meditación Diaria
 date: 2023-05-20
 author: {
   name: "Alejandro Ramírez",
-  src: "/authorImages/alejandro-ramirez.jpg"
+  src: "/authorImages/alejandro-ramirez.avif"
 }
 image: {
   src: "/postImages/post-8.avif",

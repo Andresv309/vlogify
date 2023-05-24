@@ -3,8 +3,8 @@ layout: "/src/layouts/PostLayout.astro"
 title: Por qué Tesla es Líder en la Industria de los Vehículos Eléctricos
 date: 2023-04-25
 author: {
-  name: "Laura Martínez",
-  src: "/authorImages/laura-martinez.webp"
+  name: "Laura Hernández",
+  src: "/authorImages/laura-hernandez.avif"
 }
 image: {
   src: "/postImages/post-30.avif",

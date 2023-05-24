@@ -4,7 +4,7 @@ title: Recetas Saludables para una Alimentación Equilibrada
 date: 2023-05-21
 author: {
   name: "María Torres",
-  src: "/authorImages/maria-torres.jpg"
+  src: "/authorImages/maria-torres.avif"
 }
 image: {
   src: "/postImages/post-9.avif",

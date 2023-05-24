@@ -3,8 +3,8 @@ layout: "/src/layouts/PostLayout.astro"
 title: Cómo Implementar la Inteligencia Artificial en tu Negocio
 date: 2023-02-05
 author: {
-  name: "Laura Torres",
-  src: "/authorImages/laura-torres.webp"
+  name: "Laura Sánchez",
+  src: "/authorImages/laura-sanchez.avif"
 }
 image: {
   src: "/postImages/post-25.avif",

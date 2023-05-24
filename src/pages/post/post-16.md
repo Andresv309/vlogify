@@ -3,8 +3,8 @@ layout: "/src/layouts/PostLayout.astro"
 title: La Importancia de la Investigación Científica en el Avance de la Humanidad
 date: 2022-09-14
 author: {
-  name: "María Rodríguez",
-  src: "/authorImages/maria-rodriguez.webp"
+  name: "María Torres",
+  src: "/authorImages/maria-torres.avif"
 }
 image: {
   src: "/postImages/post-16.avif",

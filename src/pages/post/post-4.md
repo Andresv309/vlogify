@@ -4,7 +4,7 @@ title: Cómo Mantener una Rutina de Ejercicio Saludable
 date: 2023-05-19
 author: {
   name: "Carlos González",
-  src: "/authorImages/carlos-gonzalez.jpg"
+  src: "/authorImages/carlos-gonzalez.avif"
 }
 image: {
   src: "/postImages/post-4.avif",

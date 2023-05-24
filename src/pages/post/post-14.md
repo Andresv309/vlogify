@@ -4,7 +4,7 @@ title: Los Descubrimientos Científicos más Impactantes del Siglo XXI
 date: 2023-04-14
 author: {
   name: "Luisa Martínez",
-  src: "/authorImages/luisa-martinez.webp"
+  src: "/authorImages/luisa-martinez.avif"
 }
 image: {
   src: "/postImages/post-14.avif",

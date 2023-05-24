@@ -4,7 +4,7 @@ title: 7 Ejercicios para Fortalecer los Músculos Abdominales
 date: 2021-01-31
 author: {
   name: "Juan Rodríguez",
-  src: "/authorImages/juan-rodriguez.webp"
+  src: "/authorImages/juan-rodriguez.avif"
 }
 image: {
   src: "/postImages/post-13.avif",

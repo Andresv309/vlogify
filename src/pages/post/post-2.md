@@ -4,7 +4,7 @@ title: Consejos para una Gestión Efectiva del Tiempo
 date: 2023-05-19
 author: {
   name: "Sara Johnson",
-  src: "/authorImages/sara-johnson.webp"
+  src: "/authorImages/sara-johnson.avif"
 }
 image: {
   src: "/postImages/post-2.avif",

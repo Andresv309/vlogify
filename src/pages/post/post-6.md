@@ -4,7 +4,7 @@ title: Cómo Cultivar Relaciones Saludables
 date: 2023-05-19
 author: {
   name: "Laura Sánchez",
-  src: "/authorImages/laura-sanchez.jpg"
+  src: "/authorImages/laura-sanchez.avif"
 }
 image: {
   src: "/postImages/post-6.avif",

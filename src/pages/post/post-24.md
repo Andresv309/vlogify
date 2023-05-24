@@ -3,8 +3,8 @@ layout: "/src/layouts/PostLayout.astro"
 title: Los Beneficios de la Inteligencia Artificial en la Industria Automotriz
 date: 2023-03-31
 author: {
-  name: "Carlos Martínez",
-  src: "/authorImages/carlos-martinez.webp"
+  name: "Carlos González",
+  src: "/authorImages/carlos-gonzalez.avif"
 }
 image: {
   src: "/postImages/post-24.avif",

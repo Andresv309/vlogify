@@ -3,8 +3,8 @@ layout: "/src/layouts/PostLayout.astro"
 title: Descubre el Contenido Educativo de MIDUDEV para Programadores
 date: 2023-02-01
 author: {
-  name: "Ana Rodríguez",
-  src: "/authorImages/ana-rodriguez.webp"
+  name: "Ana López",
+  src: "/authorImages/ana-lopez.avif"
 }
 image: {
   src: "/postImages/post-28.jfif",

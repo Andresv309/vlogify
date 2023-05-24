@@ -3,8 +3,8 @@ layout: "/src/layouts/PostLayout.astro"
 title: Los Beneficios de Aprender Python como Primer Lenguaje de Programación
 date: 2023-05-15
 author: {
-  name: "María López",
-  src: "/authorImages/maria-lopez.webp"
+  name: "María Torres",
+  src: "/authorImages/maria-torres.avif"
 }
 image: {
   src: "/postImages/post-27.avif",

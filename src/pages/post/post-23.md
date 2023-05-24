@@ -4,7 +4,7 @@ title: Ciberseguridad| Protegiendo tus Datos en el Mundo Digital
 date: 2023-02-28
 author: {
   name: "Ana López",
-  src: "/authorImages/ana-lopez.webp"
+  src: "/authorImages/ana-lopez.avif"
 }
 image: {
   src: "/postImages/post-23.avif",

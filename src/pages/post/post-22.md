@@ -4,7 +4,7 @@ title: Las Tendencias Tecnológicas más Relevantes del Año
 date: 2023-01-25
 author: {
   name: "Pedro Gómez",
-  src: "/authorImages/pedro-gomez.webp"
+  src: "/authorImages/pedro-gomez.avif"
 }
 image: {
   src: "/postImages/post-22.avif",

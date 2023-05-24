@@ -4,7 +4,7 @@ title: Los Avances en Inteligencia Artificial y su Impacto en la Sociedad
 date: 2022-06-05
 author: {
   name: "Roberto Torres",
-  src: "/authorImages/roberto-torres.webp"
+  src: "/authorImages/roberto-torres.avif"
 }
 image: {
   src: "/postImages/post-15.avif",

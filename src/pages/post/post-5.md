@@ -4,7 +4,7 @@ title: Los Beneficios del Mindfulness en la Vida Diaria
 date: 2023-05-19
 author: {
   name: "María Torres",
-  src: "/authorImages/maria-torres.jpg"
+  src: "/authorImages/maria-torres.avif"
 }
 image: {
   src: "/postImages/post-5.avif",

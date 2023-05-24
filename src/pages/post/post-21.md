@@ -3,8 +3,8 @@ layout: "/src/layouts/PostLayout.astro"
 title: Cómo Mejorar tus Habilidades de Comunicación
 date: 2022-12-31
 author: {
-  name: "María Rodríguez",
-  src: "/authorImages/maria-rodriguez.webp"
+  name: "Maria Sanchez",
+  src: "/authorImages/maria-sanchez.avif"
 }
 image: {
   src: "/postImages/post-21.avif",

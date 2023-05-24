@@ -4,7 +4,7 @@ title: Cómo Cultivar una Mentalidad Positiva
 date: 2023-05-19
 author: {
   name: "Laura Hernández",
-  src: "/authorImages/laura-hernandez.jpg"
+  src: "/authorImages/laura-hernandez.avif"
 }
 image: {
   src: "/postImages/post-3.avif",

@@ -3,8 +3,8 @@ layout: "/src/layouts/PostLayout.astro"
 title: Por qué Debes Comprar un iPhone en Lugar de un Android
 date: 2023-01-20
 author: {
-  name: "Carlos García",
-  src: "/authorImages/carlos-garcia.webp"
+  name: "Carlos González",
+  src: "/authorImages/carlos-gonzalez.avif"
 }
 image: {
   src: "/postImages/post-29.jpg",

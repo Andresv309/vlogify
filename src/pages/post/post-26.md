@@ -3,8 +3,8 @@ layout: "/src/layouts/PostLayout.astro"
 title: Los Principales Lenguajes de Programación para Desarrolladores Principiantes
 date: 2023-03-10
 author: {
-  name: "Pedro Rodríguez",
-  src: "/authorImages/pedro-rodriguez.webp"
+  name: "Pedro Gómez",
+  src: "/authorImages/pedro-gomez.avif"
 }
 image: {
   src: "/postImages/post-26.avif",
