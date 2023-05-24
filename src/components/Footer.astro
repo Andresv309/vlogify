@@ -24,11 +24,11 @@ const relevantCategories = allCategories.sort(()=> Math.random() - 0.5).slice(0,
     </p> -->
     <Roulette categories={relevantCategories}/>
     <ul class="flex flex-row pt-6 items-center gap-1  border-b-2 border-b-[var(--color-text)] ">
-      <li class="hover:text-[#1778F2] hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="mdi:facebook-box" width="35"/></a></li>
-      <li class="hover:text-slate-500 hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="mdi:github-box" width="35"/></a></li>
-      <li class="hover:text-red-500 hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="bx:bxl-gmail" width="33"/></a></li>
-      <li class="hover:text-[#00ACEE] hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="mdi:twitter-box" width="35"/></a></li>
-      <li class="pl-1 hover:text-[#0072B1] hover:-translate-y-2 hover:animate-bounce"><a href=""><Icon name="uiw:linkedin" width="27"/></a></li>
+      <li aria-label="Logo Facebook" class="hover:text-[#1778F2] hover:-translate-y-2 hover:animate-bounce"><a href="/"><Icon name="mdi:facebook-box" width="35"/></a></li>
+      <li aria-label="Logo GitHub" class="hover:text-slate-500 hover:-translate-y-2 hover:animate-bounce"><a href="/"><Icon name="mdi:github-box" width="35"/></a></li>
+      <li aria-label="Logo Gmail" class="hover:text-red-500 hover:-translate-y-2 hover:animate-bounce"><a href="/"><Icon name="bx:bxl-gmail" width="33"/></a></li>
+      <li aria-label="Logo twitter" class="hover:text-[#00ACEE] hover:-translate-y-2 hover:animate-bounce"><a href="/"><Icon name="mdi:twitter-box" width="35"/></a></li>
+      <li aria-label="Logo Linkedin" class="pl-1 hover:text-[#0072B1] hover:-translate-y-2 hover:animate-bounce"><a href="/"><Icon name="uiw:linkedin" width="27"/></a></li>
     </ul>
 
     <div class="pt-8 text-[var(--color-text)] opacity-60 text-[14px] pb-4 text-center px-4 sm:px-0">
