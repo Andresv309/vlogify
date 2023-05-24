@@ -8,11 +8,11 @@ const{text,href}=Astro.props
 
 ---
   <button class="learn-more relative inline-block cursor-pointer outline-none border-0 align-middle bg-transparent p-0 text-inherit w-[10rem] h-auto">
-    <span class="circle relative block m-0 w-[2.8rem] h-[2.8rem] bg-[--secondary-color] rounded-[1.625rem] " aria-hidden="true">
+    <span class="circle relative block m-0 w-[2.8rem] h-[2.8rem] bg-[--secondary-color] rounded-[1.625rem]" aria-hidden="true">
       <span class="icon arrow absolute top-1 bottom-0 m-auto bg-white"></span>
     </span>
     <a href={href}>
-      <span class="button-text absolute top-2.5 left-6 right-0 bottom-0 p-[0.75rem 0] m-[0 0 0 1.85rem] text-[#979595] font-[700] text-center i leading-[1.6] uppercase">{text}</span>
+      <span class="button-text absolute top-2.5 left-6 right-0 bottom-0 p-[0.75rem 0] m-[0 0 0 1.85rem] text-[var(--color-text)] font-[700] text-center i leading-[1.6] uppercase">{text}</span>
     </a>
 
   </button>

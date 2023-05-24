@@ -3,6 +3,7 @@ import InfoBubble from './InfoBubble.astro';
 import Button from './Button.astro';
 import { slugify } from '../utils/formatters';
 import ButtonReadMore from './ButtonReadMore.astro';
+import { Image, Picture } from '@astrojs/image/components';
 
 interface Props{
   image: string;
@@ -21,7 +22,20 @@ const { image, category, title, description, author, date, imgAlt, postSrc} = As
 <div id="card" class="grid grid-cols-2 relative rounded-3xl bg-[var(--background-color-card)] gap-[0.5rem] md:gap-[1.5rem] overflow-hidden md:h-[350px] h-full" >
 
   <div id="contenedor_imagen" class="relative col-span-2 md:col-span-1 overflow-hidden">
-    <img src={image} alt={imgAlt} class="h-full w-full object-cover rounded-b-none md:rounded-3xl" >
+    <!-- <img src={image} alt={imgAlt} class="h-full w-full object-cover rounded-b-none md:rounded-3xl max-w-[375] max-h-[250] md:max-w-[560] md:max-h-[350]" > -->
+
+    <Image
+      src={image}
+      alt={imgAlt}
+      width={500}
+      height={375}
+      aspectRatio="3:4"
+      fit='contain'
+      format={'webp'}
+
+      class="h-full w-full object-cover rounded-b-none md:rounded-3xl"
+    />
+
     <div class="flex flex-row absolute bottom-0 right-0 pb-3.5 pr-1">
       <InfoBubble message={author} keyWord="Escrito por"/>
       <InfoBubble message={date} keyWord="Publicado el"/>

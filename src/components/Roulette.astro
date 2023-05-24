@@ -10,7 +10,7 @@ const percentage = `${categories.length * -100/4}%`
 ---
 
 <div class="loader  flex flex-col sm:flex-row items-center h-full">
-  <p class="text-center">Lo más popular</p>
+  <p class="text-center text-[var(--color-text)] opacity-60">Lo más popular</p>
   <div class="words h-[40px] sm:text-left text-center">
     {
       categories.map(category => (
@@ -26,8 +26,8 @@ const percentage = `${categories.length * -100/4}%`
 
 
 <style define:vars={{percentage}}>
-  .loader {
-  color: rgb(124, 124, 124);
+.loader {
+  /* color: rgb(124, 124, 124); */
   font-weight: 500;
   font-size: 25px;
   -webkit-box-sizing: content-box;
