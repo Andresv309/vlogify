@@ -34,36 +34,39 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0,3)
       <slot />
     </div>
   </article>
+  {
+    relatedPosts.length > 0 &&
+    <section class="my-8">
+      <h2 class="text-2xl pb-8 px-4 text-center sm:text-left md:px-0">
+        <strong>También te podría interesar</strong>
+      </h2>
 
-  <section class="my-8">
-    <h2 class="text-2xl pb-8">
-      <strong>También te podría interesar</strong>
-    </h2>
+      <ul class="flex flex-col gap-y-10 md:gap-y-8 px-4 sm:px-0">
+        {
+          relatedPosts.map(post => {
+            // const {title, image, category, description, author, date} = post.frontmatter
+            const {title, image, category, description, author, date} = post.frontmatter
+            return (
+              <li>
+                <Card 
+                  {title}
+                  image={image.src}
+                  {category}
+                  {description}
+                  author={author.name}
+                  date={formatDate(date)}
+                  imgAlt={image.alt}
+                  postSrc={post.url}
+                />
+              </li>
+            )
+          })
+        }
+      </ul>
 
-    <ul class="flex flex-col gap-y-4 md:gap-y-8">
-      {
-        relatedPosts.map(post => {
-          // const {title, image, category, description, author, date} = post.frontmatter
-          const {title, image, category, description, author, date} = post.frontmatter
-          return (
-            <li>
-              <Card 
-                {title}
-                image={image.src}
-                {category}
-                {description}
-                author={author.name}
-                date={formatDate(date)}
-                imgAlt={image.alt}
-                postSrc={post.url}
-              />
-            </li>
-          )
-        })
-      }
-    </ul>
+    </section>
+  }
 
-  </section>
 
 
 </Layout>
