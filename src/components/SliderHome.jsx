@@ -85,8 +85,8 @@ export function SliderHome ({ authors }) {
         
 
         <div className='absolute hidden md:block w-full top-0 left-0'>
-          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={300}>
-            <path fill="var(--secondary-color)" transform="translate(28 0)">
+          <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={290}>
+            <path fill="var(--secondary-color)" transform="translate(0 0)">
               <animate 
                   attributeName='d'
                   dur="9000ms"
@@ -108,7 +108,7 @@ export function SliderHome ({ authors }) {
             </path> 
           </svg>
         </div>
-        
+
         <div className='absolute hidden md:block bottom-[-5rem] right-[2rem]'>
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={400}>
             <path fill="var(--secondary-color)" transform="translate(85 73)"> 
