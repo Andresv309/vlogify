@@ -21,6 +21,31 @@ import Layout from "../layouts/Layout.astro";
       }}
     />
 
-    <img src="/404.svg" alt="">
+    <div class="w-[40%]">
+      <img src="/404.svg" alt="Imagen Error 404">
+    </div> 
+
   </div>
 </Layout>
+
+<style>
+
+.bulb div {
+  background-color: bisque;
+  border-radius: 10px;
+  display: block;
+  transform-origin: center top;
+  animation: swing_31 1.3s ease-in-out infinite alternate;
+}
+
+@keyframes swing_31 {
+  0% {
+    transform: rotate(18deg);
+  }
+
+  100% {
+    transform: rotate(-18deg);
+  }
+}
+
+</style>
