@@ -12,4 +12,7 @@ export const CATEGORIES_ICONS = {
   'Biología': 'mdi:dog',
   'Medicina': 'mdi:test-tube',
   'Computación': 'mdi:monitor-dashboard',
+  'Programación': 'mdi:application-brackets-outline',
+  'Tecnología': 'mdi:tablet-cellphone', 
+  'Habilidades Personales': 'mdi:trophy-outline'
 }
