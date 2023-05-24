@@ -7,7 +7,7 @@ author: {
   src: "/authorImages/maria-torres.jpg"
 }
 image: {
-  src: "/postImages/post-5.jpg",
+  src: "/postImages/post-5.avif",
   alt: "Imagen de portada para Los Beneficios del Mindfulness en la Vida Diaria",
 }
 description: Descubre los beneficios del mindfulness y cómo puedes incorporarlo en tu vida diaria para reducir el estrés, mejorar tu bienestar mental y encontrar mayor claridad y enfoque.

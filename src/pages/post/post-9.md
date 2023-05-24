@@ -7,7 +7,7 @@ author: {
   src: "/authorImages/maria-torres.jpg"
 }
 image: {
-  src: "/postImages/post-9.jpg",
+  src: "/postImages/post-9.avif",
   alt: "Imagen de portada para Recetas Saludables para una Alimentación Equilibrada",
 }
 description: Mantener una alimentación equilibrada es fundamental para cuidar de nuestra salud. Descubre estas deliciosas recetas saludables que te ayudarán a nutrir tu cuerpo y mantener un estilo de vida saludable.

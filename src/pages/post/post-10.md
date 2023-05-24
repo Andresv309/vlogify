@@ -7,7 +7,7 @@ author: {
   src: "/authorImages/carlos-gomez.avif"
 }
 image: {
-  src: "/postImages/post-10.jpg",
+  src: "/postImages/post-10.avif",
   alt: "Imagen de portada para Cómo Mejorar tu Postura y Evitar Problemas de Espalda",
 }
 description: Mantener una buena postura es esencial para prevenir problemas de espalda y mantener una columna vertebral saludable. Aprende consejos prácticos para mejorar tu postura en el día a día.

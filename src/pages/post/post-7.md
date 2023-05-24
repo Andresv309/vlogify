@@ -7,7 +7,7 @@ author: {
   src: "/authorImages/maria-sanchez.avif"
 }
 image: {
-  src: "/postImages/post-7.jpg",
+  src: "/postImages/post-7.avif",
   alt: "Imagen de portada: Los beneficios del ejercicio regular",
 }
 description: El ejercicio regular es esencial para mantener un estilo de vida saludable. Ofrece numerosos beneficios tanto para el cuerpo como para la mente, mejorando el bienestar general. En esta publicación, exploraremos algunas de las ventajas que brinda el ejercicio regular.
