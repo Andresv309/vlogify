@@ -1,0 +1,44 @@
+---
+import { Image, Picture } from '@astrojs/image/components';
+import Link from './Link.astro';
+
+const { authors } = Astro.props
+const minAuthors = authors.slice(0,1)
+// console.log(authors);
+---
+
+<div class="w-full h-80">
+  <ul class="relative w-full h-full">
+    {
+      minAuthors.map(author => {
+        const {name, href, authorSrc} = author
+        return (
+          <li class="absolute w-full h-full top-0 left-0">
+            <div class=" h-full grid place-items-center grid-cols-[60%_40%] p-16">
+                <div class="flex flex-col gap-5">
+                  <h4 class="text-[2.5rem] font-bold">
+                    ¡Hola! Mi nombre es {name}
+                  </h4>
+                  <a {href}>Te invito a leer mis posts aquí</a>
+                </div>
+                <img
+                  src={authorSrc.src}
+                  alt={name}
+                  class="rounded-full w-52"
+                >
+            </div>
+          </li>
+        )
+      })
+    }
+  </ul>
+</div>
+
+<!-- 
+<Image
+src={authorSrc.src ?? "/favicon.svg"}
+alt=""
+width={50}
+height={50}
+
+/> -->

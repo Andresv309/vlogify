@@ -22,19 +22,19 @@ const { image, category, title, description, author, date, imgAlt, postSrc} = As
 <div id="card" class="grid grid-cols-2 relative rounded-3xl bg-[var(--background-color-card)] gap-[0.5rem] md:gap-[1.5rem] overflow-hidden md:h-[350px] h-full" >
 
   <div id="contenedor_imagen" class="relative col-span-2 md:col-span-1 overflow-hidden">
-    <!-- <img src={image} alt={imgAlt} class="h-full w-full object-cover rounded-b-none md:rounded-3xl max-w-[375] max-h-[250] md:max-w-[560] md:max-h-[350]" > -->
+    <img src={image} alt={imgAlt} class="h-full w-full object-cover rounded-b-none md:rounded-3xl max-w-[375] max-h-[250] md:max-w-[560] md:max-h-[350]" >
 
-    <Image
+    <!-- <Image
       src={image}
       alt={imgAlt}
-      width={500}
-      height={375}
+      width={1000}
+      height={750}
       aspectRatio="3:4"
-      fit='contain'
+      fit={'cover'}
       format={'webp'}
 
       class="h-full w-full object-cover rounded-b-none md:rounded-3xl"
-    />
+    /> -->
 
     <div class="flex flex-row absolute bottom-0 right-0 pb-3.5 pr-1">
       <InfoBubble message={author} keyWord="Escrito por"/>

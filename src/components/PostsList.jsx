@@ -2,7 +2,7 @@ import { formatDate } from "../utils/formatters";
 import Card from "./Card.astro";
 
 export default function PostsList({ posts }) {
-  console.log(posts)
+  // console.log(posts)
   return (
     <ul>
       {

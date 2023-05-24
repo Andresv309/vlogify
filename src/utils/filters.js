@@ -8,7 +8,8 @@ const POST_FRONTMATTER_PAGES = {
   },
   AUTHOR: {
     pageRoute: "author",
-    path: ["author", "name"]
+    path: ["author", "name"],
+    authorSrc: ["author", "src"]
   }
 }
 
@@ -41,12 +42,19 @@ export async function getMatchData(allPosts, matchCondition) {
 
   const allUniqueValues = await getUniquesForCondition(allPosts, matchCondition)
 
+  const authors = [...new Set(allPosts.map(post => {
+    const {author} = post.frontmatter
+    return {name: author.name, src: author.src}
+  }).flat())]
+  // console.log(hola);
+
   return allUniqueValues.map(match => (
     {
       // [matchCondition]: match,
       name: match,
       href: `${pageRoute}/${slugify(match)}`,
-      icon: CATEGORIES_ICONS[match] ?? CATEGORIES_ICONS.DEFAULT
+      icon: CATEGORIES_ICONS[match] ?? CATEGORIES_ICONS.DEFAULT,
+      authorSrc: authors.find(author => author.name === match) ?? null
     }
   ))
 }
