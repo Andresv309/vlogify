@@ -18,7 +18,7 @@ specifiers:
 dependencies:
   '@astrojs/image': 0.16.9_astro@2.5.5
   '@astrojs/react': 2.2.0_lhsvdmrfrkqkmxtqosqgyd3k4i
-  '@astrojs/tailwind': 3.1.2_w4mihal45edfrnncnioktvfyqy
+  '@astrojs/tailwind': 3.1.3_w4mihal45edfrnncnioktvfyqy
   '@tailwindcss/typography': 0.5.9_tailwindcss@3.3.2
   '@types/react': 18.2.6
   '@types/react-dom': 18.2.4
@@ -92,14 +92,9 @@ packages:
 
   /@astrojs/markdown-remark/2.2.1_astro@2.5.5:
     resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
-  /@astrojs/markdown-remark/2.2.1_astro@2.5.5:
-    resolution: {integrity: sha512-VF0HRv4GpC1XEMLnsKf6jth7JSmlt9qpqP0josQgA2eSpCIAC/Et+y94mgdBIZVBYH/yFnMoIxgKVe93xfO2GA==}
     peerDependencies:
       astro: ^2.5.0
-      astro: ^2.5.0
     dependencies:
-      '@astrojs/prism': 2.1.2
-      astro: 2.5.5
       '@astrojs/prism': 2.1.2
       astro: 2.5.5
       github-slugger: 1.5.0
@@ -118,8 +113,6 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/prism/2.1.2:
-    resolution: {integrity: sha512-3antim1gb34689GHRQFJ88JEo93HuZKQBnmxDT5W/nxiNz1p/iRxnCTEhIbJhqMOTRbbo5h2ldm5qSxx+TMFQA==}
   /@astrojs/prism/2.1.2:
     resolution: {integrity: sha512-3antim1gb34689GHRQFJ88JEo93HuZKQBnmxDT5W/nxiNz1p/iRxnCTEhIbJhqMOTRbbo5h2ldm5qSxx+TMFQA==}
     engines: {node: '>=16.12.0'}
@@ -146,14 +139,13 @@ packages:
       - supports-color
     dev: false
 
-  /@astrojs/tailwind/3.1.2_w4mihal45edfrnncnioktvfyqy:
-    resolution: {integrity: sha512-KyZ84WExLRU/TRIQm09ce+ND/0UG9AK9+7k/gjCbxuKScc/RieZ73oh4MkoEFrN/9OToMklvt+wmkAt3+u/ubQ==}
+  /@astrojs/tailwind/3.1.3_w4mihal45edfrnncnioktvfyqy:
+    resolution: {integrity: sha512-10S1omrv5K5HRVAZ0fBgN5vQykn2HRL332LAVFyBASMn1Ff6gDfSK+CPUeUu94eZUOEaPnECLK8EHAqZ8iY9CA==}
     peerDependencies:
       astro: ^2.5.0
       tailwindcss: ^3.0.24
     dependencies:
       '@proload/core': 0.3.3
-      astro: 2.5.5
       astro: 2.5.5
       autoprefixer: 10.4.14_postcss@8.4.23
       postcss: 8.4.23

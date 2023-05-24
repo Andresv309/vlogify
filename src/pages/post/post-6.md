@@ -7,7 +7,7 @@ author: {
   src: "/authorImages/laura-sanchez.jpg"
 }
 image: {
-  src: "/postImages/post-6.jpg",
+  src: "/postImages/post-6.avif",
   alt: "Imagen de portada para Cómo Cultivar Relaciones Saludables",
 }
 description: Aprende cómo cultivar relaciones saludables basadas en la comunicación efectiva, el respeto mutuo y el cuidado emocional.
