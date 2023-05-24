@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: 5 Consejos para una Alimentación Saludable
-date: 2023-05-25
+date: 2023-01-25
 author: {
   name: "María López",
   src: "/authorImages/maria-lopez.webp"

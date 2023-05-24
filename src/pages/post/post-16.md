@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: La Importancia de la Investigación Científica en el Avance de la Humanidad
-date: 2023-06-10
+date: 2022-09-14
 author: {
   name: "María Rodríguez",
   src: "/authorImages/maria-rodriguez.webp"

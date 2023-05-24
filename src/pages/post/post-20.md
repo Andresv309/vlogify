@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: La Evolución de la Computación - Desde los Inicios hasta la Era Digital
-date: 2023-07-02
+date: 2022-07-02
 author: {
   name: "Javier Rodríguez",
   src: "/authorImages/javier-rodriguez.webp"

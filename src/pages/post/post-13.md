@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: 7 Ejercicios para Fortalecer los Músculos Abdominales
-date: 2023-05-28
+date: 2021-01-31
 author: {
   name: "Juan Rodríguez",
   src: "/authorImages/juan-rodriguez.webp"

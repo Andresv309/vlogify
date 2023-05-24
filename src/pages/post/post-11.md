@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: Cómo Organizar tu Espacio de Trabajo para Mejorar tu Productividad
-date: 2023-05-23
+date: 2022-05-23
 author: {
   name: "Carlos Martínez",
   src: "/authorImages/carlos-martinez.webp"

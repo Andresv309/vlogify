@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: Los Avances de la Medicina - Innovaciones que Transforman la Atención Médica
-date: 2023-06-25
+date: 2023-03-12
 author: {
   name: "Carlos López",
   src: "/authorImages/carlos-lopez.webp"

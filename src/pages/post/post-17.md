@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: Los Misterios del Universo - Explorando el Cosmos
-date: 2023-06-15
+date: 2022-04-11
 author: {
   name: "Alejandro Gómez",
   src: "/authorImages/alejandro-gomez.webp"

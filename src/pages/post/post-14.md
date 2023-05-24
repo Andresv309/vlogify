@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: Los Descubrimientos Científicos más Impactantes del Siglo XXI
-date: 2023-06-01
+date: 2023-04-14
 author: {
   name: "Luisa Martínez",
   src: "/authorImages/luisa-martinez.webp"

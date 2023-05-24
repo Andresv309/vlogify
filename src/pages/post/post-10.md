@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: Cómo Mejorar tu Postura y Evitar Problemas de Espalda
-date: 2023-05-21
+date: 2023-04-21
 author: {
   name: "Carlos Gómez",
   src: "/authorImages/carlos-gomez.avif"

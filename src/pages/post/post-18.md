@@ -1,7 +1,7 @@
 ---
 layout: "/src/layouts/PostLayout.astro"
 title: La Importancia de la Biodiversidad - La Tejido de la Vida en la Tierra
-date: 2023-06-20
+date: 2021-06-20
 author: {
   name: "Laura Martínez",
   src: "/authorImages/laura-martinez.webp"
