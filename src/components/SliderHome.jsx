@@ -87,7 +87,8 @@ export function SliderHome ({ authors }) {
         <div className='absolute hidden md:block w-full top-0 left-0'>
           <svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" width={290}>
             <path fill="var(--secondary-color)" transform="translate(0 0)">
-              <animate 
+              <animate
+                  className='animate-spin' 
                   attributeName='d'
                   dur="9000ms"
                   repeatCount="indefinite"
