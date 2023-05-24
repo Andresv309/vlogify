@@ -12,6 +12,7 @@ const allPosts = await Astro.glob("./post/*.md")
 import { getMatchData } from "../utils/filters.js"
 import { formatDate } from '../utils/formatters';
 import BannerHome from '../components/BannerHome.astro';
+import { SliderHome } from '../components/SliderHome.jsx';
 // const allCategories = await getMatchData(allPosts, "category")
 const allCategories = await getMatchData(allPosts, "CATEGORY")
 const allAuthors = await getMatchData(allPosts, "AUTHOR")
@@ -30,12 +31,13 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0, 5)
 
 <Layout title="Home Page">
 
-	<section class="bg-[var(--background-color-card)] flex flex-col rounded-md mb-16">
+	<section class="bg-[var(--background-color-card)] flex flex-col rounded-md sm:mb-12 mb-4">
 		<!-- <Title title="Últimos Posts" /> -->
 		<!-- <img src="/favicon.svg" alt="" class="w-[250px]"> -->
 		<!-- <img src="/banner.avif" alt="Banner Biblioteca Blog" class="w-[250px]"> -->
 
-		<BannerHome authors={allAuthors}/>
+		<!-- <BannerHome authors={allAuthors}/> -->
+		<SliderHome authors={allAuthors} client:load/>
 
 	</section>
 

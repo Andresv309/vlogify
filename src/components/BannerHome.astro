@@ -1,6 +1,7 @@
 ---
 import { Image, Picture } from '@astrojs/image/components';
 import Link from './Link.astro';
+import SliderHome from './SliderHome';
 
 const { authors } = Astro.props
 const minAuthors = authors.slice(0,1)
@@ -32,6 +33,7 @@ const minAuthors = authors.slice(0,1)
       })
     }
   </ul>
+  <SliderHome client:load/>
 </div>
 
 <!-- 
