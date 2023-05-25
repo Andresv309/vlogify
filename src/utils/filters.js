@@ -18,11 +18,9 @@ export async function getPagesFor(allPosts, matchCondition, filterPostsOptions) 
   const pageRoute = POST_FRONTMATTER_PAGES[matchCondition].pageRoute
   const pagePath = POST_FRONTMATTER_PAGES[matchCondition].path
 
-  // const allUniquePages = await getUniquesForCondition(allPosts, matchCondition)
   const allUniquePages = await getUniquesForCondition(allPosts, matchCondition)
 
   return allUniquePages.map(page => {
-    // const matchPosts = allPosts.filter(post => post.frontmatter[matchCondition] === page)
     const matchPosts = allPosts.filter(post => getValue(post.frontmatter, pagePath) === page)
     const filteredPosts = filterBlogPosts(matchPosts, filterPostsOptions)
 
@@ -46,11 +44,9 @@ export async function getMatchData(allPosts, matchCondition) {
     const {author} = post.frontmatter
     return {name: author.name, src: author.src}
   }).flat())]
-  // console.log(hola);
 
   return allUniqueValues.map(match => (
     {
-      // [matchCondition]: match,
       name: match,
       href: `${pageRoute}/${slugify(match)}`,
       icon: CATEGORIES_ICONS[match] ?? CATEGORIES_ICONS.DEFAULT,
@@ -63,13 +59,11 @@ async function getUniquesForCondition(allPosts, matchCondition) {
   const pagePath = POST_FRONTMATTER_PAGES[matchCondition].path
   return [
     ...new Set(allPosts.map(post => {
-      // return post.frontmatter[matchCondition]
       return getValue(post.frontmatter, pagePath)
     }
     ).flat())
   ]
 }
-
 
 export function filterBlogPosts(allPosts, {
   filterOutDrafts = true,
@@ -113,7 +107,6 @@ export function filterBlogPosts(allPosts, {
   // Limit the number of posts passed
   if (typeof limit === 'number') {
     return filteredPosts.slice(0, limit)
-    // return filteredPosts.slice(limit)
   }
 
   return filteredPosts

@@ -4,28 +4,17 @@ import Roulette from "./Roulette.astro";
 import { getMatchData } from "../utils/filters";
 import LogoPage from "./LogoPage.astro";
 
-
 const allPosts = await Astro.glob("../pages/post/*md")
 const allCategories = await getMatchData(allPosts, "CATEGORY")
-
 const relevantCategories = allCategories.sort(()=> Math.random() - 0.5).slice(0,5)
-
-
 ---
-
-
-
-
 
 <footer class="pt-16 md:pt-24">
   <div class="flex flex-col items-center bg-[var(--background-color)] border-t border-emerald-200 pt-4">
     <div class="opacity-95">
-      <!-- <h3 class="text-[1.5rem] font-bold">Blog Personal</h3> -->
       <LogoPage />
     </div>
-    <!-- <p class="text-center px-28 pt-5 w-10/12">
-      Descubre contenido fascinante y enriquecedor en nuestra página web de blogs. Explora una amplia variedad de temas, desde tecnología y ciencia hasta estilo de vida y viajes. Únete a nuestra comunidad, comparte tus ideas y comentarios, y sumérgete en un mundo de nuevas perspectivas, inspiración y conocimiento. ¡Explora los blogs y déjate llevar por la aventura!
-    </p> -->
+
     <Roulette categories={relevantCategories}/>
     <ul class="flex flex-row pt-6 items-center gap-1  border-b-2 border-b-[var(--color-text)] ">
       <li class="hover:text-[#1778F2] hover:-translate-y-2 hover:animate-bounce"><a href="/" aria-label="Logo Facebook"><Icon name="mdi:facebook-box" width="35"/></a></li>

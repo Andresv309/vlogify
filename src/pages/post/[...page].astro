@@ -1,19 +1,11 @@
 ---
 import Card from "../../components/Card.astro";
 import Pagination from "../../components/Pagination.astro";
-// import PostsList from "../../components/PostsList";
-// import PostsList from "../../components/PostsList.astro"
-import PostsList from "../../components/PostsList.jsx"
 import SearchBar from "../../components/SearchBar.astro";
 import Title from "../../components/Title.astro";
 import Layout from "../../layouts/Layout.astro";
 import { filterBlogPosts } from "../../utils/filters";
 import { formatDate } from "../../utils/formatters";
-// import debounce from 'just-debounce-it'
-// import debounce from "../../../node_modules/just-debounce-it"
-
-// console.log(allPosts)
-
 
 export async function getStaticPaths ({ paginate }) {
   const allPosts = await Astro.glob("./*.md")
@@ -27,8 +19,7 @@ export async function getStaticPaths ({ paginate }) {
   })
 }
 
-const { page, posts } = Astro.props;
-console.log(Astro.props)
+const { page } = Astro.props;
 ---
 
 <Layout title="Posts">
@@ -67,9 +58,6 @@ console.log(Astro.props)
       lastPage={page.lastPage}
     />
   </section>
-
-  <!-- <PostsList client:load posts={page.data}/> -->
-  <!-- <PostsList client:only posts={posts}/> -->
 
 </Layout>
 

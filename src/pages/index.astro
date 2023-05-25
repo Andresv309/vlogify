@@ -1,79 +1,30 @@
 ---
-import Card1 from '../components/Card1.astro';	
 import Card from '../components/Card.astro';
 import CategoriesList from '../components/CategoriesList.astro';
 import Navigator from '../components/Navigator.astro';
-import Title from '../components/Title.astro';
-import TituloMagic from '../components/MagicTitle.astro';
 import Layout from '../layouts/Layout.astro';
 
 const allPosts = await Astro.glob("./post/*.md")
 
 import { getMatchData } from "../utils/filters.js"
 import { formatDate } from '../utils/formatters';
-import BannerHome from '../components/BannerHome.astro';
 import { SliderHome } from '../components/SliderHome.jsx';
-// const allCategories = await getMatchData(allPosts, "category")
+
 const allCategories = await getMatchData(allPosts, "CATEGORY")
 const allAuthors = await getMatchData(allPosts, "AUTHOR")
-// const allAuthors = [...allPosts.]
-// console.log(allCategories)
 
 const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0, 5)
-
-// console.log(randomPosts)
-
-// const test = await filterPostsBy(allPosts, 'category', {limit: 2})
-// console.log(test)
-
-
 ---
 
 <Layout title="Home Page">
 
 	<section class="bg-[var(--background-color-card)] flex flex-col rounded-md sm:mb-12 mb-4">
-		<!-- <Title title="Últimos Posts" /> -->
-		<!-- <img src="/favicon.svg" alt="" class="w-[250px]"> -->
-		<!-- <img src="/banner.avif" alt="Banner Biblioteca Blog" class="w-[250px]"> -->
-
-		<!-- <BannerHome authors={allAuthors}/> -->
 		<SliderHome authors={allAuthors} client:load/>
-
 	</section>
 
 	<Navigator />
 	<section class="grid grid-cols-1 pt-8 gap-4 px-4 md:grid-cols-[75%_25%] md:px-0">
-
-		<!-- <section class="grid sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 max-w-[1800px] m-auto gap-x-9 gap-y-14 py-9">
-			<Card2 
-				image="/ejemploCard.jpg"
-				category="Montañas"
-				title="Las montañas son Hermosas"
-			/>
-			<Card1 
-				image="/ejemploCard.jpg"
-				category="Montañas"
-				title="Las montañas son Hermosas"
-			/>
-			<Card1 
-				image="/ejemploCard.jpg"
-				category="Montañas"
-				title="Las montañas son Hermosas"
-			/>
-			<Card 
-				image="/ejemploCard.jpg"
-				category="Montañas"
-				title="Las montañas son Hermosas"
-			/>
-		</section> -->
-
-		<!-- <section class="grid grid-cols-4 max-w-[1800px] m-auto gap-x-9 gap-y-14 py-9"> -->
 		<section class="order-2 max-w-[1800px] md:order-1">
-			<!-- <TituloMagic 
-				primary_title="Ya Funciono"
-				complement="Mariana" 
-			/> -->
-			
 			<ul class="flex flex-col gap-y-4 md:gap-y-8">
 				{
 					randomPosts.map(post => {
@@ -95,39 +46,6 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0, 5)
 					})
 				}
 			</ul>
-
-		 <!-- <Card
-			<TituloMagic 
-				primary_title="Ya Funciono"
-				complement="Mariana" 
-			/>
-
-		 <Card
-				image="/ejemploCard.jpg"
-				category="Montañas"
-				title="Las montañas son Hermosas"
-				description="	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio. Dolores quis, sit laborum repellat dignissimos optio"
-			/>
-			<Card
-				image="/post-1.avif"
-				category="Tokio"
-				title=" La primavera tokiota en su máximo esplendor"
-				description="	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio."
-			/>
-			<Card
-				image="/Infidelidad.webp"
-				category="Infidelidades"
-				title="Infidelidad: causas, tipos y soluciones"
-				description="	Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio."
-			/>
-			<Card
-				image="/ejemploCard.jpg"
-				category="Montañas"
-				title="Las montañas son Hermosas"
-				description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea perferendis reprehenderit eum officia veritatis neque id omnis? Accusantium deserunt architecto dolores quis, sit laborum repellat dignissimos optio. Dolores quis, sit laborum repellat dignissimos optio"
-			/> -->
-
-
 		</section>
 
 		<aside class="relative order-1 md:order2 pb-6 md:pb-0">
@@ -136,8 +54,5 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0, 5)
 			</div>
 		</aside>
 	</section>
-
-
-
 
 </Layout>

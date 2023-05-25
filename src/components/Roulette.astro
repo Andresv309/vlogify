@@ -4,9 +4,7 @@ interface Props {
 }
 
 const {categories}= Astro.props;
-
 const percentage = `${categories.length * -100/4}%`  
-
 ---
 
 <div class="loader  flex flex-col sm:flex-row items-center h-full">
@@ -17,17 +15,12 @@ const percentage = `${categories.length * -100/4}%`
       <span class="word" >{category.name}</span>
       ))
     }
-      <!-- <span class="word">forms</span>
-      <span class="word">switches</span>
-      <span class="word">cards</span>
-      <span class="word">buttons</span> -->
   </div>
 </div>
 
 
 <style define:vars={{percentage}}>
 .loader {
-  /* color: rgb(124, 124, 124); */
   font-weight: 500;
   font-size: 25px;
   -webkit-box-sizing: content-box;
@@ -93,10 +86,5 @@ const percentage = `${categories.length * -100/4}%`
     transform: translateY(-400%);
   }
 }
-
-
-
-
-
 
 </style>

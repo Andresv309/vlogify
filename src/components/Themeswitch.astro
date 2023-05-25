@@ -2,7 +2,6 @@
 import { Icon } from "astro-icon";
 ---
 
-
 <div class="inline-flex items-center">
   <Icon class="w-4 h-4 mr-2" name="heroicons-outline:sun" />
   <select name="themeSwitch" id="themeSwitch">
@@ -11,12 +10,6 @@ import { Icon } from "astro-icon";
     <option value="light">Light</option>
   </select>
 </div>
-
-<!-- <style>
-  :global(.dark) {
-    color-scheme: dark;
-  }
-</style> -->
 
 <script>
   const select = document.getElementById("themeSwitch") as HTMLSelectElement;

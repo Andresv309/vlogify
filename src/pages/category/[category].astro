@@ -3,28 +3,7 @@ import Card from "../../components/Card.astro";
 import MagicTitle from "../../components/MagicTitle.astro";
 import Layout from "../../layouts/Layout.astro";
 import { getPagesFor } from "../../utils/filters";
-import { formatDate, slugify } from "../../utils/formatters"
-
-// export async function getStaticPaths () {
-//   const allPosts = await Astro.glob("../post/*.md")
-//   const allCategories = [
-//     ...new Set(allPosts.map(post => {
-//       return post.frontmatter.category
-//     }
-//     ).flat())
-//   ]
-  
-//   return allCategories.map(categoryName => {
-//     const categoryPosts = allPosts.filter(post => post.frontmatter.category === categoryName)
-//     return {
-//       params: { category: slugify(categoryName) },
-//       props: {
-//         categoryName,
-//         posts: categoryPosts
-//       }
-//     }
-//   })
-// }
+import { formatDate } from "../../utils/formatters"
 
 export async function getStaticPaths () {
   const allPosts = await Astro.glob("../post/*.md")
@@ -37,11 +16,8 @@ export async function getStaticPaths () {
   })
 }
 
-
-
 const { category } = Astro.params
 const { categoryName, posts } = Astro.props
-// console.log(posts)
 ---
 
 <Layout title={categoryName}>
@@ -52,7 +28,6 @@ const { categoryName, posts } = Astro.props
       {
         posts.map(post => {
           const {title, image, category, description, author, date} = post.frontmatter
-          // console.log(category)
 						return (
 							<Card 
 								{title}
@@ -64,7 +39,6 @@ const { categoryName, posts } = Astro.props
 								imgAlt={image.alt}
                 postSrc={post.url}
 							/>
-            // <a href={post.url}>Ver Post</a>
           )
         })
       }

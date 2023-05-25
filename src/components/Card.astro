@@ -1,9 +1,7 @@
 ---
 import InfoBubble from './InfoBubble.astro';
-import Button from './Button.astro';
 import { slugify } from '../utils/formatters';
 import ButtonReadMore from './ButtonReadMore.astro';
-// import { Image, Picture } from '@astrojs/image/components';
 
 interface Props{
   image: string;
@@ -24,18 +22,6 @@ const { image, category, title, description, author, date, imgAlt, postSrc} = As
   <div id="contenedor_imagen" class="relative col-span-2 md:col-span-1 overflow-hidden">
     <img src={image} alt={imgAlt} class="h-full w-full object-cover rounded-b-none md:rounded-3xl max-w-[375] max-h-[250] md:max-w-[560] md:max-h-[350]" >
 
-    <!-- <Image
-      src={image}
-      alt={imgAlt}
-      width={1000}
-      height={750}
-      aspectRatio="3:4"
-      fit={'cover'}
-      format={'webp'}
-
-      class="h-full w-full object-cover rounded-b-none md:rounded-3xl"
-    /> -->
-
     <div class="flex flex-row absolute bottom-0 right-0 pb-3.5 pr-1">
       <InfoBubble message={author} keyWord="Escrito por"/>
       <InfoBubble message={date} keyWord="Publicado el"/>
@@ -52,14 +38,12 @@ const { image, category, title, description, author, date, imgAlt, postSrc} = As
       </h3>
     </div>
     <div class="line-clamp-4">
-    <!-- <div class="overflow-hidden h-24 "> -->
       <p class="font-light">
         {description}
       </p>
     </div>
 
     <div class= "flex text-[var(--color-category-text)] font-normal justify-center pt-6">
-      <!-- <Button text="Leer más" style="secondary" href={postSrc}/> -->
       <ButtonReadMore text="Leer Más"  href={postSrc}/>
     </div>
   </div>
@@ -72,14 +56,6 @@ const { image, category, title, description, author, date, imgAlt, postSrc} = As
   transform: translatey(11%);
   transition: 0.7s;
 }
-/* #contenedor_imagen:hover > div{
-  visibility: visible;
-  opacity: 100%;
-  transform: translatey(-10%);
-}
-#contenedor_imagen:hover > img{
-  filter: brightness(60%);
-}  */
 
 #card:hover #contenedor_imagen > div{
   visibility: visible;
@@ -88,17 +64,10 @@ const { image, category, title, description, author, date, imgAlt, postSrc} = As
 }
 
 #card #contenedor_imagen > img{
-  /* transition: filter 700ms ease-in-out; */
-  /* transition: all 700ms ease-in-out; */
   transition: 0.3s;
 }
 #card:hover #contenedor_imagen > img{
   filter: brightness(60%);
-  /* opacity: 0.6; */
 }
-
-/* p {
-  -webkit-line-clamp: 2;
-} */
 
 </style>

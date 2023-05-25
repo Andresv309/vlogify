@@ -1,18 +1,15 @@
 ---
 import BannerPost from "../components/BannerPost.astro";
 import Card from "../components/Card.astro";
-import Title from "../components/Title.astro";
 import Layout from "../layouts/Layout.astro";
 import { filterBlogPosts } from "../utils/filters";
 import { formatDate } from "../utils/formatters";
 
 const { frontmatter } = Astro.props
-const { title, date, author, image, description, draft, category } = frontmatter
-// console.log(frontmatter)
+const { title, date, author, image, description, category } = frontmatter
 const allPosts = await Astro.glob("../pages/post/*.md")
 const categoryPosts = await filterBlogPosts(allPosts, {matchCondition: {condition: 'CATEGORY', conditionValue: category}, sortByDate: false})
 const relatedPosts = categoryPosts.filter(post => post.frontmatter.title !== title)
-// console.log(categoryPosts)
 const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0,3)
 
 ---
@@ -20,7 +17,6 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0,3)
 <Layout {title} {description}>
   <article>
     <header>
-      <!-- <Title title= "Mi publicación" /> -->
       <BannerPost
         {title}
         {category}
@@ -44,7 +40,6 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0,3)
       <ul class="flex flex-col gap-y-10 md:gap-y-8 px-4 sm:px-0">
         {
           relatedPosts.map(post => {
-            // const {title, image, category, description, author, date} = post.frontmatter
             const {title, image, category, description, author, date} = post.frontmatter
             return (
               <li>
@@ -66,7 +61,5 @@ const randomPosts = allPosts.sort(() => Math.random() - 0.5).slice(0,3)
 
     </section>
   }
-
-
 
 </Layout>

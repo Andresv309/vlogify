@@ -1,38 +1,15 @@
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-// import Shape from '../../public/shape.svg'
-// import { EffectFade } from 'swiper';
-// import { Navigation, Pagination, Scrollbar } from 'swiper';
-
-// Import Swiper styles
-// import 'swiper/css';
-// const Swiper = new Swiper('.swiper', {
-//   // Install modules
-//   modules: [Navigation, Pagination, Scrollbar],
-//   speed: 500,
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-//   // ...
-// });
 
 import { Keyboard, Pagination, Navigation, Autoplay } from "swiper";
 
 export function SliderHome ({ authors }) {
-  // console.log(authors)
   return (
     <div className="w-full h-140 sm:h-80">
       <div className="relative w-full h-full pb-8">
         <Swiper
-          // spaceBetween={50}
-          // slidesPerView={3}
-          // onSlideChange={() => console.log('slide change')}
-          // onSwiper={(swiper) => console.log(swiper)}
-          // modules={[EffectFade]} effect="fade"
           slidesPerView={1}
           spaceBetween={30}
           keyboard={{
@@ -138,12 +115,5 @@ export function SliderHome ({ authors }) {
 
       </div>  
     </div>
-
-
-
-
   );
 };
-
-
-// top-[-4.2rem] left-1/4 z-1 
