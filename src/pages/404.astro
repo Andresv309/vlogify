@@ -6,10 +6,10 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Página No Encontrada">
-  <div class="grid place-items-center text-center gap-y-4 h-full">
+  <div class="flex flex-col items-center text-center gap-y-4 h-[475px] relative">
     <div>
-      <Title title="Bueno, esto es extraño."></Title>
-      <p>Parece que hemos puesto algo donde no era...</p>
+      <Title title="Bueno, esto es extraño." size="md:text-[4rem] sm:text-[3rem] text-[2.5rem]"></Title>
+      <p class="text-[1.5rem]">Parece que hemos puesto algo donde no era...</p>
     </div>
     <Button
       text="Ir al Home"
@@ -20,13 +20,31 @@ import Layout from "../layouts/Layout.astro";
         side: "right"
       }}
     />
-
-    <div class="w-[40%]">
-      <img src="/404.svg" alt="Imagen Error 404">
+    <div class="w-full h-full text-center leading-none absolute top-60 sm:top-40 -z-10">
+        <h1 id="h1Content"
+          class=`
+            font-black
+            text-[12rem] sm:text-[20rem] md:text-[23.5rem] 
+            after:w-[185px] after:h-[185px] sm:after:w-[300px] sm:after:h-[300px] md:after:w-[350px] md:after:h-[350px]
+            after:translate-y-[-4px] after:-translate-x-[93px] sm:after:-translate-x-[150px] md:after:-translate-x-[176px]
+            sm:after:translate-y-0 md:after:translate-y-0
+          `
+        >
+          404
+        </h1>
     </div> 
 
   </div>
 </Layout>
 
 <style>
+
+#h1Content::after{
+  content: "";
+  position: absolute;
+  left: 50%;
+  background-image: url("/404.svg");
+  background-repeat: no-repeat;
+}
+
 </style>

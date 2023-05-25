@@ -1,13 +1,17 @@
 ---
 interface Props {
   title: string;
+  size?: string;
 }
 
 const {
-  title
+  title,
+  size = "text-2xl"
 } = Astro.props;
+
+
 ---
 
-<h1 class=`text-2xl`>
+<h1 class=`${size}`>
   <strong>{title}</strong>
 </h1>
