@@ -36,7 +36,7 @@ export function SliderHome ({ authors }) {
             const {name, href, authorSrc} = author
             return (
               <SwiperSlide key={name}>
-                <div className=" h-full grid place-items-center grid-cols-1 sm:grid-cols-[60%_40%] sm:py-10 py-8 sm:px-24 px-16 gap-4">
+                <div className=" h-full grid place-items-center grid-cols-1 sm:grid-cols-[63%_37%] sm:py-10 py-8 sm:px-24 px-16 gap-4">
                   <div className="flex flex-col gap-5 text-center sm:text-left">
                     <h4 className="sm:text-[2.4rem] font-bold text-[1.8rem]">
                       ¡Hola! Mi nombre es
@@ -50,7 +50,7 @@ export function SliderHome ({ authors }) {
 
                   <img
                     src={authorSrc.src}
-                    alt={name}
+                    alt={name} 
                     className="rounded-full w-52"
                   />
                 </div>
