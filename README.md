@@ -41,3 +41,32 @@ _Note_: _All posts were written by [ChatGPT](https://chat.openai.com/) and autho
   <td><img src="https://github.com/Andresv309/astro-blog/assets/116861909/5a7c5d76-14e3-4c6c-bc51-e8ca1282c4f9" width="500" alt="Vlogify Footer"/></td>
 </tr>
 </table>
+
+
+<br>
+<br>
+
+## Core Team
+
+> 🚀 Producers - 💅 Designers - 🤖 Developers for this Project
+
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center"><a href="https://github.com/Andresv309"><img src="https://avatars.githubusercontent.com/u/116861909?v=4?s=120" width="120px"  alt="Andres Profile"/><br /><sub><b>Andres Vianchá</b></sub></a> <br><br>    
+        <a href="https://github.com/Andresv309">
+          <img src="https://img.shields.io/badge/follow-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="Cristian Profile" />
+        </a> 
+      </td>
+      <td align="center"><a href="https://github.com/Cristian1503V"><img src="https://avatars.githubusercontent.com/u/92413890?v=4?s=120"  width="120px"  alt="Cristian Profile"/><br /><sub><b>Cristian Vega</b></sub></a> <br><br> 
+        <a href="https://github.com/Cristian1503V">
+          <img src="https://img.shields.io/badge/follow-30363D?style=for-the-badge&logo=GitHub-Sponsors&logoColor=#white" alt="Cristian Profile"></img>
+        </a> 
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+
+
